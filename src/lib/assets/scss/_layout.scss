@@ -1,0 +1,167 @@
+@use './vars';
+
+*, 
+*:before, 
+*:after {
+  box-sizing: border-box;
+  font-family: inherit;
+  max-width: 100%;
+}
+
+main {
+  width: 100%;
+  max-width: 45rem;
+  margin: 6rem auto;
+  padding: 0 1rem;
+
+  @media (max-width: vars.$smMax) {
+    margin: 3rem auto;
+  }
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: auto 1fr auto;
+  min-height: 100vh;
+}
+
+img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+}
+
+.post {
+  h1 {
+    margin-bottom: 1rem;
+  }
+
+  .meta {
+    font-size: 0.8rem;
+    margin-bottom: 4rem;
+  }
+
+  img + h1 {
+    margin-top: 1rem;
+  }
+}
+
+li {
+  margin-bottom: 0.25rem;
+}
+
+.posts-list {
+  list-style-type: none;
+  padding: 0;
+
+  li {
+    margin-bottom: 6rem;
+  }
+
+  img + h2 {
+    margin-top: 1rem;
+  }
+
+  a {
+    display: block;
+  }
+}
+
+.post-footer { 
+  ul {
+    padding: 0;
+  }
+
+  li {
+    display: inline-block;
+    font-size: 0.8rem;
+
+    a {
+      background-color: var(--lightAccent);
+      padding: .5rem 0.75rem;
+      text-transform: uppercase;
+      font-family: var(--primaryFont);
+      font-weight: bold;
+    }
+
+    + li {
+      margin-left: 0.5rem;
+    }
+  }
+}
+
+:where(h2, h3, h4, h5, h6) {
+  .icon-link {
+    position: relative;
+    
+    &::before {
+      content: '#';
+      fill: currentColor;
+      position: absolute;
+      left: -1rem;
+      width: 1rem;
+      height: 1rem;
+      top: 0;
+      opacity: 0.2;
+      transition: opacity .2s;
+      
+      @media (min-width: vars.$smMin) {
+        left: -1.5rem;
+      }
+    }
+
+    &:hover::before {
+      opacity: 1;
+    }
+  }
+}
+
+.footer-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.socials {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  margin-top: 1rem;
+
+  &.dark {
+    background: var(--darker);
+  }
+
+  &.spacer {
+    margin-top: 4rem;
+  }
+
+  a {
+    margin: 0rem 1rem;
+    padding-top: 0.4rem;
+  }
+}
+
+.icon {
+  width: 2.2rem;
+}
+
+.pfp-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 2rem 0rem;
+
+  @media (min-width: vars.$smMin) {
+    float: right;
+  }
+
+  .pfp {
+    width: 12rem;
+    border-radius: 50%;
+  }
+}
