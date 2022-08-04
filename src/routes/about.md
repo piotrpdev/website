@@ -12,7 +12,7 @@
 
 ## Who are you?
 
-<div class="pfp-container"><img class="pfp" src="%sveltekit.assets%/images/pfp.jpg" /></div>
+<div class="pfp-container"><img class="pfp" src="/images/pfp.jpg" /></div>
 
 Hi, my name is Piotr, but you can call Peter.
 
@@ -90,7 +90,7 @@ I **love** music, [I even compose my own sometimes](https://musescore.com/piotrb
 
 I also like messing around with electronics sometimes. I have worked on a couple of small projects ~~and tried soldering a few times~~ involving the Arduino, ESP32, and Raspberry Pi.
 
-Those are the most notable ones. Apart from that, [Science](https://www.youtube.com/user/vsauce), [Maths](https://www.youtube.com/c/3blue1brown), [Flight Simulation](https://www.youtube.com/user/Airforceproud95), [Philosophy](https://www.youtube.com/c/Exurb1a), [English](https://www.dictionaryofobscuresorrows.com/), [Gaming](%sveltekit.assets%/images/gmod.png), [Retro Gaming](%sveltekit.assets%/images/pkmn.jpg), etc. Again, a bit of everything.
+Those are the most notable ones. Apart from that, [Science](https://www.youtube.com/user/vsauce), [Maths](https://www.youtube.com/c/3blue1brown), [Flight Simulation](https://www.youtube.com/user/Airforceproud95), [Philosophy](https://www.youtube.com/c/Exurb1a), [English](https://www.dictionaryofobscuresorrows.com/), [Gaming](/images/gmod.png), [Retro Gaming](/images/pkmn.jpg), etc. Again, a bit of everything.
 
 ## Did you make this website?
 

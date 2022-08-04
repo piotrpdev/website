@@ -6,7 +6,7 @@ categories:
   - "electronics"
   - "raspberry pi"
   - "web"
-coverImage: "%sveltekit.assets%/images/projects/raspbian-http-server/thumb.png"
+coverImage: "/images/projects/raspbian-http-server/thumb.png"
 coverWidth: 16
 coverHeight: 9
 excerpt: Turning on an LED with the power of the Pi
