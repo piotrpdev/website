@@ -2,7 +2,7 @@
 	<title>Piotr Płaczek's Website</title>
 </svelte:head>
 
-# Welcome
+<h1>Welcome</h1>
 
 This is where I plan to show off my portfolio as I progress through my programming career.
 

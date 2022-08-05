@@ -1,3 +1,5 @@
+@use './vars';
+
 .callout {
   background: var(--lightAccent);
   padding: 2rem;
@@ -49,5 +51,21 @@
       }
     }
 
+  }
+}
+
+.toc {
+  position: fixed;
+  left: calc(30vw - 480px);
+
+  *.toc-level-1 {
+    margin-right: 2rem;
+  }
+
+  background-color: var(--lighterAccent);
+  border-radius: 0.25rem;
+
+  @media (max-width: 1600px) {
+    display: none;
   }
 }

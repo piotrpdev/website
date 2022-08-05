@@ -3,6 +3,7 @@ import { mdsvex } from 'mdsvex'
 import preprocess from 'svelte-preprocess'
 import rehypeAutolinkHeadings from 'rehype-autolink-headings'
 import rehypeSlug from 'rehype-slug'
+import rehypeToc from '@atomictech/rehype-toc'
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
@@ -24,6 +25,7 @@ const config = {
 			rehypePlugins: [
 				rehypeSlug,
 				rehypeAutolinkHeadings,
+				rehypeToc
 			],
 		}),
 	],
