@@ -22,10 +22,18 @@
 
 
 <script>
+  import { onMount } from 'svelte';
+
   export let PostContent
   export let meta
 
   const { title, excerpt, date, updated, coverImage, coverWidth, coverHeight, categories } = meta
+
+  onMount(() => {
+    if (document.querySelector("article>h2") === null) {
+      document.querySelector(".toc").remove()
+    }
+  })
 </script>
 
 

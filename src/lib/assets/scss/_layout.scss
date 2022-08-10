@@ -99,15 +99,15 @@ li {
       content: '#';
       fill: currentColor;
       position: absolute;
-      left: -1rem;
+      left: -1.5rem;
       width: 1rem;
       height: 1rem;
       top: 0;
       opacity: 0.2;
       transition: opacity .2s;
-      
-      @media (min-width: vars.$smMin) {
-        left: -1.5rem;
+
+      @media (max-width: vars.$smMin) {
+        display: none;
       }
     }
 

@@ -58,6 +58,10 @@
   position: fixed;
   left: calc(30vw - 480px);
 
+  article & {
+    top: 16rem;
+  }
+
   *.toc-level-1 {
     margin-right: 2rem;
   }
