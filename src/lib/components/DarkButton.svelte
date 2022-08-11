@@ -4,6 +4,7 @@
     import { onMount } from "svelte";
     import SunSvg from "./svg/SunSVG.svelte";
     import MoonSvg from "./svg/MoonSvg.svelte";
+    import { browser } from "$app/env";
 
     const STORAGE_KEY = 'theme';
     const DARK_PREFERENCE = '(prefers-color-scheme: dark)';
@@ -46,8 +47,10 @@
     };
 
     onMount(() => {
-        applyTheme();
-        window.matchMedia(DARK_PREFERENCE).addEventListener('change', applyTheme);
+        if (browser) {
+          applyTheme();
+          window.matchMedia(DARK_PREFERENCE).addEventListener('change', applyTheme);
+        }
     });
   </script>
 

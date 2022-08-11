@@ -96,4 +96,4 @@ Those are the most notable ones. Apart from that, [Science](https://www.youtube.
 
 [A part of it](https://github.com/piotrpdev/website), but most of the work was done by [Josh Collinsworth](https://github.com/josh-collinsworth/sveltekit-blog-starter). Go check him out, he makes awesome stuff!
 
-By the way, this website was built using [SvelteKit](https://kit.svelte.dev/) and is hosted on [Vercel](https://vercel.com/).
+By the way, this website was built using [SvelteKit](https://kit.svelte.dev/) and is hosted on [Netlify](https://www.netlify.com/).
