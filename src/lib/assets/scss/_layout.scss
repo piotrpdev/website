@@ -6,6 +6,7 @@
   box-sizing: border-box;
   font-family: inherit;
   max-width: 100%;
+  transition: background 0.8s;
 }
 
 main {
@@ -123,6 +124,10 @@ li {
   justify-content: center;
   align-items: center;
   text-align: center;
+
+  p {
+    color: var(--slate);
+  }
 }
 
 .socials {

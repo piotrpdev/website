@@ -45,6 +45,23 @@ $xxxlMin: 122.5rem;
 }
 
 body {
+
+  &.dark {
+    --accent: #0f5132;
+    --background: #212224;
+    --lightAccent: #18392b;
+    --lighterAccent: #1d2e28;
+    --dark: #0a5c36;
+    --darker: #08914f;
+    --slate: #a5c0aa;
+  
+    --white: #fff;
+    --black: #152030;
+  
+    --ink: var(--slate);
+    --paper: var(--background);
+  }
+
   @media (min-width: $smMin) {
     font-size: 1.125rem;
   }
