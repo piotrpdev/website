@@ -1,6 +1,4 @@
 <script>
-    // ? https://dev.to/lenaschnedlitz/create-a-simple-dark-mode-toggle-with-svelte-4b3g
-
     import { onMount } from "svelte";
     import SunSvg from "./svg/SunSVG.svelte";
     import MoonSvg from "./svg/MoonSvg.svelte";
@@ -41,8 +39,6 @@
         // store opposite of preference
         localStorage.setItem(STORAGE_KEY, prefersDarkThemes() ? THEMES.LIGHT : THEMES.DARK);
       }
-  
-      // TODO: apply new theme
         applyTheme();
     };
 
