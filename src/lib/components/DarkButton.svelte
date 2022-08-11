@@ -1,54 +1,54 @@
 <script>
-    import { onMount } from "svelte";
-    import SunSvg from "./svg/SunSVG.svelte";
-    import MoonSvg from "./svg/MoonSvg.svelte";
-    import { browser } from "$app/env";
+    import { onMount } from "svelte"
+    import SunSvg from "./svg/SunSVG.svelte"
+    import MoonSvg from "./svg/MoonSvg.svelte"
+    import { browser } from "$app/env"
 
-    const STORAGE_KEY = 'theme';
-    const DARK_PREFERENCE = '(prefers-color-scheme: dark)';
+    const STORAGE_KEY = 'theme'
+    const DARK_PREFERENCE = '(prefers-color-scheme: dark)'
   
     const THEMES = {
       DARK: 'dark',
       LIGHT: 'light',
     };
 
-    let currentTheme;
+    let currentTheme = THEMES.LIGHT;
   
-    const prefersDarkThemes = () => window.matchMedia(DARK_PREFERENCE).matches;
+    const prefersDarkThemes = () => window.matchMedia(DARK_PREFERENCE).matches
 
     const applyTheme = () => {
-        const preferredTheme = prefersDarkThemes() ? THEMES.DARK : THEMES.LIGHT;
-        currentTheme = localStorage.getItem(STORAGE_KEY) ?? preferredTheme;
+        const preferredTheme = prefersDarkThemes() ? THEMES.DARK : THEMES.LIGHT
+        currentTheme = localStorage.getItem(STORAGE_KEY) ?? preferredTheme
 
         if (currentTheme === THEMES.DARK) {
-        document.body.classList.remove(THEMES.LIGHT);
-        document.body.classList.add(THEMES.DARK);
+        document.body.classList.remove(THEMES.LIGHT)
+        document.body.classList.add(THEMES.DARK)
         } else {
-        document.body.classList.remove(THEMES.DARK);
-        document.body.classList.add(THEMES.LIGHT);
+        document.body.classList.remove(THEMES.DARK)
+        document.body.classList.add(THEMES.LIGHT)
         }
     };
   
     const toggleTheme = () => {
-      const stored = localStorage.getItem(STORAGE_KEY);
+      const stored = localStorage.getItem(STORAGE_KEY)
   
       if (stored) {
         // clear storage
-        localStorage.removeItem(STORAGE_KEY);
+        localStorage.removeItem(STORAGE_KEY)
       } else {
         // store opposite of preference
-        localStorage.setItem(STORAGE_KEY, prefersDarkThemes() ? THEMES.LIGHT : THEMES.DARK);
+        localStorage.setItem(STORAGE_KEY, prefersDarkThemes() ? THEMES.LIGHT : THEMES.DARK)
       }
-        applyTheme();
+        applyTheme()
     };
 
     onMount(() => {
         if (browser) {
-          applyTheme();
-          window.matchMedia(DARK_PREFERENCE).addEventListener('change', applyTheme);
+          applyTheme()
+          window.matchMedia(DARK_PREFERENCE).addEventListener('change', applyTheme)
         }
     });
-  </script>
+</script>
 
 <button class="dark-toggle" on:click={toggleTheme}>
     {#if currentTheme === THEMES.LIGHT}
