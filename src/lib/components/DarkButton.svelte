@@ -1,5 +1,7 @@
 <script>
     import { onMount } from 'svelte'
+    import SunSvg from './svg/SunSVG.svelte'
+    import MoonSvg from './svg/MoonSvg.svelte'
     import { browser } from '$app/env'
 
     const STORAGE_KEY = 'theme'
@@ -49,4 +51,9 @@
 </script>
 
 <button class="dark-toggle" on:click={toggleTheme}>
+    {#if currentTheme === THEMES.LIGHT}
+        <SunSvg />
+    {:else}
+        <MoonSvg />
+    {/if}
 </button>
