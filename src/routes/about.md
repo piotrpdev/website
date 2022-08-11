@@ -3,9 +3,19 @@
 </svelte:head>
 
 <script>
+  import { onMount } from 'svelte'
+  import { OpenSheetMusicDisplay } from 'opensheetmusicdisplay'
+
   const epoch = new Date(Date.UTC(2018, 6, 29, 8, 26, 0, 0));
   const diff = new Date(Date.now() - epoch);
   const delta = Math.round(diff.getTime() / (1000*60*60*24*31*12))
+
+  onMount(async () => {
+    const osmd = new OpenSheetMusicDisplay("example");
+    await osmd.load("/mxml/gluttony_short.musicxml");
+    osmd.zoom = 0.5
+    await osmd.render()
+  })
 </script>
 
 # About
@@ -87,6 +97,8 @@ If you're curious why I stuck with JavaScript instead of Python or C++, it actua
 I'd like to say I'm into a bit of everything, probably due to getting bored easily.
 
 I **love** music, [I even compose my own sometimes](https://musescore.com/piotrbplaczek). I'm a self taught pianist and I am very passionate about everything involved in music including composition, general theory, etc.
+
+<div id="example" class="music-container"></div>
 
 I also like messing around with electronics sometimes. I have worked on a couple of small projects ~~and tried soldering a few times~~ involving the Arduino, ESP32, and Raspberry Pi.
 
