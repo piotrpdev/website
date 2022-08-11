@@ -1,8 +1,8 @@
 <script>
-    import { onMount } from "svelte"
-    import SunSvg from "./svg/SunSVG.svelte"
-    import MoonSvg from "./svg/MoonSvg.svelte"
-    import { browser } from "$app/env"
+    import { onMount } from 'svelte'
+    import SunSvg from './svg/SunSVG.svelte'
+    import MoonSvg from './svg/MoonSvg.svelte'
+    import { browser } from '$app/env'
 
     const STORAGE_KEY = 'theme'
     const DARK_PREFERENCE = '(prefers-color-scheme: dark)'
