@@ -22,6 +22,8 @@
 
 
 <script>
+import { browser } from '$app/env';
+
   import { onMount } from 'svelte';
 
   export let PostContent
@@ -30,8 +32,10 @@
   const { title, excerpt, date, updated, coverImage, coverWidth, coverHeight, categories } = meta
 
   onMount(() => {
-    if (document.querySelector("article>h2") === null) {
-      document.querySelector(".toc").remove()
+    if (browser) {
+      if (document.querySelector("article>h2") === null) {
+        document.querySelector(".toc").remove()
+      }
     }
   })
 </script>
