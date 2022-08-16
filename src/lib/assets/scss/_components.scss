@@ -66,6 +66,27 @@
     }
   }
 
+  &-link-h1 {
+    font-weight: bold;
+  }
+
+  &-level-1 {
+    list-style-type: none;
+  }
+
+  &-level-2 {
+    list-style-type: disc;
+  }
+
+  &-item-h2 {
+    margin-top: 0.5rem;
+  }
+
+  &-level-3 {
+    margin-top: 0.25rem;
+    list-style-type: circle;
+  }
+
   article & {
     top: 16rem;
   }
