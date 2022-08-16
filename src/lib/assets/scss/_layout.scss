@@ -146,7 +146,7 @@ li {
   text-align: center;
 
   p {
-    color: var(--slate);
+    color: var(--darker);
   }
 }
 
@@ -188,7 +188,7 @@ li {
   .pfp {
     width: 12rem;
     border-radius: 50%;
-    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    box-shadow: var(--shadow) 0px 7px 29px 0px;
 
     @keyframes cycle {
       50% { border-radius: 0%; }
@@ -197,5 +197,51 @@ li {
     &:hover {
       animation: cycle 8s infinite;
     }
+  }
+}
+
+.media-container {
+  @extend .pfp-container;
+  margin: 1rem;
+
+  float: none;
+
+  @media (min-width: vars.$smMin) {
+    margin: 2rem;
+  }
+
+  .media {
+    width: 36rem;
+    box-shadow: var(--shadow) 0px 7px 29px 0px;
+  } 
+
+  &-left {
+    @extend .pfp-container;
+    @media (min-width: vars.$smMin) {
+      float: left;
+      margin: 2rem;
+    }
+
+    margin: 1rem;
+
+    .media {
+      width: 12rem;
+      box-shadow: var(--shadow) 0px 7px 29px 0px;
+    } 
+  }
+
+  &-right {
+    @extend .pfp-container;
+    @media (min-width: vars.$smMin) {
+      float: right;
+      margin: 2rem;
+    }
+
+    margin: 1rem;
+
+    .media {
+      width: 12rem;
+      box-shadow: var(--shadow) 0px 7px 29px 0px;
+    } 
   }
 }

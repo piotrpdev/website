@@ -58,7 +58,10 @@ Not very pretty, but everyone starts somewhere. I still remember ocassionaly hop
 
 ### Becoming a criminal *(maybe)*
 
+
 At the start of 2020, I began what I would consider to be my first ***actual*** project: a [*Price Tracker*](https://github.com/piotrpdev/WeBuy-Cex-Price-Tracker); a Python script that scraped the Irish [CeX](https://ie.webuy.com/) website and uploaded the results to [Google Sheets](https://www.google.com/sheets/about/).
+
+<div class="media-container"><img class="media" src="https://github.com/piotrpdev/WeBuy-Cex-Price-Tracker/raw/master/captures/sheet.gif" /></div>
 
 Me and a friend noticed that the prices on the website would occasionally shift, so naturally, we aimed to ~~manipulate the stock market~~ record the trends and see if we could score a deal.
 
@@ -72,7 +75,7 @@ The offhand choice to work on this project singlehandedly **changed my life** an
 
 > *Hold on, what about the criminal part?*
 
-Oh yeah, forgot about that. Turns out that [CeX's](https://ie.webuy.com/site/terms/) terms *may* prohibit the compilation of any parts of their site e.g. prices and/or also hold copyright over them making what I did *technically* "illegal". But my project is on [GitHub](https://github.com/piotrpdev/WeBuy-Cex-Price-Tracker) and I promise it was for, um, *educational purposes?* Yeah, that's it. *~~Disclaimer: This is a joke please don't sue me~~*.
+Oh yeah, forgot about that. Turns out that [CeX's terms](https://ie.webuy.com/site/terms/) *may* prohibit the compilation of any parts of their site e.g. prices and/or also hold copyright over them making what I did *technically* "illegal". But my project is on [GitHub](https://github.com/piotrpdev/WeBuy-Cex-Price-Tracker) and I promise it was for, um, *educational purposes?* Yeah, that's it. *~~Disclaimer: This is a joke please don't sue me~~*.
 
 ### What happened next?
 
@@ -92,6 +95,6 @@ Those are the most notable ones. Apart from that, [Science](https://www.youtube.
 
 ## Did you make this website?
 
-[A part of it](https://github.com/piotrpdev/website), but most of the work was done by [Josh Collinsworth](https://github.com/josh-collinsworth/sveltekit-blog-starter). Go check him out, he makes awesome stuff!
+[A part of it](https://github.com/piotrpdev/website), but a lot of the work was done by [Josh Collinsworth](https://github.com/josh-collinsworth/sveltekit-blog-starter). Go check him out, he makes awesome stuff!
 
-By the way, this website was built using [SvelteKit](https://kit.svelte.dev/) and is hosted on [Netlify](https://www.netlify.com/).
+By the way, this website was built using [SvelteKit](https://kit.svelte.dev/) and is hosted on [Netlify](https://www.netlify.com/) (*because Vercel is having troubles hosting it*).

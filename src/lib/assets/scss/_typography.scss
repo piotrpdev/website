@@ -76,3 +76,19 @@ ul {
     color: var(--accent);
   }
 }
+
+blockquote {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  margin-left: 0px;
+  margin-right: 0px;
+  padding-left: 1em;
+  padding-right: 0.8em;
+  border-left: 5px solid var(--link);
+  background-color: var(--slater);
+
+  p {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+}

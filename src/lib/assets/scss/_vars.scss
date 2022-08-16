@@ -20,14 +20,17 @@ $xxxlMin: 122.5rem;
   --lightAccent: #a3b18a;
   --lighterAccent: #dad7cd;
   --dark: #588157;
-  --darker: #3d6350;
+  --darker: #294236;
   --slate: #3a5a40;
+  --slater: #f1f1f1;
 
   --link: #40b635;
   --hover: #2e8127;
 
   --art-link: var(--dark);
   --art-hover: var(--darker);
+
+  --shadow: #64646f33;
 
   --white: #fff;
   --black: #152030;
@@ -60,12 +63,15 @@ body {
     --dark: #0a5c36;
     --darker: #08914f;
     --slate: #a5c0aa;
+    --slater: #4a4a4a;
 
     --link: var(--darker);
     --hover: #08ad5d;
 
     --art-link: var(--link);
     --art-hover: var(--hover);
+
+    --shadow: #9797a133;
   
     --white: #fff;
     --black: #152030;
