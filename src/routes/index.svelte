@@ -24,14 +24,14 @@
 			school: null
 		},
 		{
-			thumb: "/static/images/wd1ca1.png",
+			thumb: "/images/wd1ca1.png",
 			link: "https://peter-wd2ca1.netlify.app/",
 			title: "Sun Tracker™",
 			description: "Website that displays the current position of the sun in a variety of countries.",
 			school: "Semester 2"
 		},
 		{
-			thumb: "/static/images/wd1ca2.png",
+			thumb: "/images/wd1ca2.png",
 			link: "https://peter-wd1ca2.netlify.app/",
 			title: "Rosslare Tidy Towns",
 			description: "Website dedicated to Rosslare Tidy Towns, a non-profit organization in my town.",
