@@ -3,9 +3,7 @@
 </svelte:head>
 
 <script>
-  const epoch = new Date(Date.UTC(2018, 6, 29, 8, 26, 0, 0));
-  const diff = new Date(Date.now() - epoch);
-  const delta = Math.round(diff.getTime() / (1000*60*60*24*31*12))
+  import EpochCounter from '$lib/components/EpochCounter.svelte';
 </script>
 
 # About
@@ -24,7 +22,7 @@ If you want to check out some of it or message me, look at the [Contact](/contac
 
 ## How did you get started?
 
-I have been passionate about programming for about {delta} years so far, starting off with C++ back in 2018, *not a choice I would recommend for the begineer programmer*. This is an excerpt from one of my first programs:
+I have been passionate about programming for <EpochCounter /> so far, starting off with C++ back in 2018, *not a choice I would recommend for the begineer programmer*. This is an excerpt from one of my first programs:
 
 ```cpp
 int main() {
