@@ -15,6 +15,25 @@ main {
   margin: 6rem auto;
   padding: 0 1rem;
 
+  article {
+    h2 {
+      color: var(--art-link);
+
+      &:hover {
+        color: var(--art-hover);
+      }
+    }
+  }
+
+  p a {
+    color: var(--link);
+    text-decoration: none;
+
+    &:hover {
+      color: var(--hover);
+    }
+  }
+
   @media (max-width: vars.$smMax) {
     margin: 3rem auto;
   }
@@ -66,6 +85,7 @@ li {
 
   a {
     display: block;
+    text-decoration: none;
   }
 }
 

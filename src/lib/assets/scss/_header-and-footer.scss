@@ -102,6 +102,10 @@ header {
       background: none;
       border: none;
 
+      &:hover {
+        cursor: pointer;
+      }
+
       @media (max-width: vars.$smMin) {
         top: 2rem;
         left: 2rem;

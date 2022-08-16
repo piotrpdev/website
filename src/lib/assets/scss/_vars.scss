@@ -15,13 +15,19 @@ $xxxlMin: 122.5rem;
 
 :root {
   // Colors
-  --accent: #E63946;
+  --accent: #7f8a6d;
   --background: #FAF9F8;
   --lightAccent: #a3b18a;
   --lighterAccent: #dad7cd;
   --dark: #588157;
-  --darker: #344e41;
+  --darker: #3d6350;
   --slate: #3a5a40;
+
+  --link: #8911d9;
+  --hover: #6307a0;
+
+  --art-link: var(--dark);
+  --art-hover: var(--darker);
 
   --white: #fff;
   --black: #152030;
@@ -54,6 +60,12 @@ body {
     --dark: #0a5c36;
     --darker: #08914f;
     --slate: #a5c0aa;
+
+    --link: var(--darker);
+    --hover: #08ad5d;
+
+    --art-link: var(--link);
+    --art-hover: var(--hover);
   
     --white: #fff;
     --black: #152030;
