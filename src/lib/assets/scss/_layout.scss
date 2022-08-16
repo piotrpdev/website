@@ -188,5 +188,14 @@ li {
   .pfp {
     width: 12rem;
     border-radius: 50%;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+
+    @keyframes cycle {
+      50% { border-radius: 0%; }
+    }
+
+    &:hover {
+      animation: cycle 8s infinite;
+    }
   }
 }
