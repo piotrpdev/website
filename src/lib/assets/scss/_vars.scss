@@ -20,9 +20,11 @@ $xxxlMin: 122.5rem;
   --lightAccent: #a3b18a;
   --lighterAccent: #dad7cd;
   --dark: #588157;
-  --darker: #294236;
+  --darker: #245b41;
   --slate: #3a5a40;
   --slater: #f1f1f1;
+
+  --badge-white: var(--white);
 
   --link: #40b635;
   --hover: #2e8127;
@@ -37,6 +39,10 @@ $xxxlMin: 122.5rem;
 
   --ink: var(--slate);
   --paper: var(--background);
+
+  :where(h1, h2, h3, h4, h5, h6) {
+    color: var(--dark);
+  }
   
 
   // Fonts
@@ -65,6 +71,8 @@ body {
     --slate: #a5c0aa;
     --slater: #4a4a4a;
 
+    --badge-white: #ccc;
+
     --link: var(--darker);
     --hover: #08ad5d;
 
@@ -78,6 +86,10 @@ body {
   
     --ink: var(--slate);
     --paper: var(--background);
+
+    :where(h1, h2, h3, h4, h5, h6) {
+      color: var(--darker);
+    }
   }
 
   @media (min-width: $smMin) {

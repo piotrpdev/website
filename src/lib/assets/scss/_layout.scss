@@ -25,7 +25,7 @@ main {
     }
   }
 
-  p a {
+  p a, .index-project a {
     color: var(--link);
     text-decoration: none;
 
@@ -244,4 +244,50 @@ li {
       box-shadow: var(--shadow) 0px 7px 29px 0px;
     } 
   }
+}
+
+.index-project {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 2rem;
+
+  .media {
+    width: 24rem;
+  }
+
+  @media (max-width: vars.$smMax) {
+    flex-direction: column !important;
+
+    .media {
+      width: 12rem;
+    }
+  }
+
+  &:nth-child(even) {
+    flex-direction: row-reverse;
+  }
+
+  h3 {
+    margin: 0;
+  }
+}
+
+.projects-list {
+  @media (min-width: vars.$smMin) {
+    margin-left: -20%;
+    margin-right: -20%;
+    max-width: none;
+  }
+}
+
+.badge {
+  display: inline-flex;
+  background-color: var(--lightAccent);
+  color: var(--badge-white);
+  padding: 0.125rem 0.5rem;
+  border-radius: 1rem;
+  margin-top: 0.5rem;
+  font-size: medium;
 }
