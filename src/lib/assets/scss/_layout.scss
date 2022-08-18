@@ -98,10 +98,19 @@ li {
 
     border: 2px solid var(--lighterAccent);
     border-radius: 0.3rem;
-    padding: 1rem 2rem;
+
+    h2, p {
+      padding-left: 2rem;
+    }
+
+    //padding: 1rem 2rem;
 
     @media (max-width: vars.$smMax) {
-      padding: 1rem;
+      //padding: 1rem;
+
+      h2, p {
+        padding-left: 0;
+      }
 
       text-align: center;
 
