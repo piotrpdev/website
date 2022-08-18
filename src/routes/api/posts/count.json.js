@@ -1,6 +1,6 @@
-export const get = async () => {
+export const GET = async () => {
 	try {
-		const posts = import.meta.glob(`../../../lib/posts/*.md`);
+		const posts = import.meta.glob('../../../lib/posts/*.md');
 
 		return {
 			status: 200,
