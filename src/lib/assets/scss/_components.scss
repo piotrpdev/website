@@ -55,7 +55,7 @@
 }
 
 .toc {
-  position: fixed;
+  position: var(--tocPosition);
   left: calc(30vw - 480px);
 
   box-shadow: var(--shadow) 0px 7px 29px 0px;
@@ -90,7 +90,7 @@
   }
 
   article & {
-    top: 16rem;
+    top: var(--tocTop);
   }
 
   *.toc-level-1 {

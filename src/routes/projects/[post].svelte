@@ -32,6 +32,28 @@
 
   const { title, excerpt, date, updated, coverImage, coverWidth, coverHeight, categories } = meta
 
+  let root;
+  let fontSize;
+	let scrollY = 0;
+	let width = 1600;
+	let position = 'absolute';
+  let top = "16rem";
+
+  $: root && typeof scrollY === 'number' && width && calculate_positions();
+
+  // Yoinked from https://github.com/pngwn/MDsveX/blob/master/packages/site/src/routes/docs.svelte
+  function calculate_positions() {
+    if (window.innerWidth <= 1600) return;
+
+		if (root.getBoundingClientRect().top >= 6 * fontSize) {
+			position = 'absolute';
+      top = "16rem";
+		} else {
+			position = 'fixed';
+      top = "6rem";
+		}
+  }
+
   onMount(() => {
     if (browser) {
       if (document.querySelector("article>h2") === null) {
@@ -39,10 +61,15 @@
       }
 
       fixYTVideos();
+
+      fontSize = parseFloat(getComputedStyle(document.documentElement).fontSize);
+
+      calculate_positions();
     }
   })
 </script>
 
+<svelte:window bind:scrollY bind:innerWidth={width} />
 
 <svelte:head>
   <!-- Be sure to add your image files and un-comment the lines below -->
@@ -60,7 +87,7 @@
 </svelte:head>
 
 
-<article class="post">
+<article class="post" bind:this={root} style="--tocPosition: {position}; --tocTop: {top}">
   <!-- You might want to add an alt frontmatter attribute. If not, leaving alt blank here works, too. -->
   <img
     class="cover-image"

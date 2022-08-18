@@ -16,7 +16,7 @@ main {
   padding: 0 1rem;
 
   article {
-    h2 {
+    p > h2 {
       color: var(--art-link);
 
       &:hover {
@@ -90,7 +90,11 @@ li {
   padding: 0;
 
   li {
-    margin-bottom: 6rem;
+    margin-bottom: 4rem;
+
+    @media (min-width: vars.$smMin) {
+      margin-bottom: 6rem;
+    }
 
     background-color: var(--slatest);
 
