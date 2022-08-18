@@ -200,6 +200,10 @@ li {
 
   p {
     color: var(--darker);
+
+    @media (min-width: vars.$smMin) {
+      font-size: medium;
+    }
   }
 }
 
