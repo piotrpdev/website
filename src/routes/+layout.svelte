@@ -1,21 +1,8 @@
 <!-- This is the global layout file; it "wraps" every page on the site. (Or more accurately: is the parent component to every page component on the site.) -->
-<script context="module">
-	export const load = async ({ url, fetch }) => {
-		/**
-		 * This fetch call is not used in this file, but the route won't be pre-rendered
-		 * and routed properly unless it's called inside a `load` function. ¯\_(ツ)_/¯
-		 * */
-		const rss = await fetch(`/api/rss.xml`);
-
-		return {
-			props: {
-				path: url.pathname
-			}
-		};
-	};
-</script>
-
 <script>
+	export let data;
+	$: ({ path } = data);
+
 	import '$lib/assets/scss/global.scss';
 	import Header from '$lib/components/Header.svelte';
 	import Footer from '$lib/components/Footer.svelte';
@@ -24,12 +11,9 @@
 	import { prefetch } from '$app/navigation';
 	import { onMount } from 'svelte';
 	import { fade } from 'svelte/transition';
-	import Callout from '$lib/components/Callout.svelte';
 
 	const transitionIn = { delay: 150, duration: 150 };
 	const transitionOut = { duration: 100 };
-
-	export let path;
 
 	/**
 	 * Updates the global store with the current path. (Used for highlighting

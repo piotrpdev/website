@@ -1,34 +1,15 @@
 <!-- This file renders each individual projects post for reading. Be sure to update the svelte:head below -->
-<script context="module">
-	export const load = async ({ params }) => {
-		try {
-			const post = await import(`../../lib/posts/${params.post}.md`);
-
-			return {
-				props: {
-					PostContent: post.default,
-					meta: { ...post.metadata, slug: params.post }
-				}
-			};
-		} catch (error) {
-			return {
-				status: 404,
-				error: error.message
-			};
-		}
-	};
-</script>
-
 <script>
+	export let data;
+	$: ({
+		PostContent,
+		meta: { title, excerpt, date, updated, coverImage, coverWidth, coverHeight, categories }
+	} = data);
+
 	import { browser } from '$app/env';
 	import fixYTVideos from '$lib/assets/js/fixYTVideos';
 
 	import { onMount } from 'svelte';
-
-	export let PostContent;
-	export let meta;
-
-	const { title, excerpt, date, updated, coverImage, coverWidth, coverHeight, categories } = meta;
 
 	let root;
 	let fontSize;

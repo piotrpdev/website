@@ -1,6 +1,6 @@
 <script>
 	import MainNav from './MainNav.svelte';
-	import { siteAuthor, siteAuthorGitHub, siteAuthorLinkedIn, siteAuthorTwitter } from '$lib/config';
+	import { siteAuthor } from '$lib/config';
 	import Socials from './Socials.svelte';
 </script>
 

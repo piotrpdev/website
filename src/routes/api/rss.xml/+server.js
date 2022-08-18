@@ -1,3 +1,4 @@
+import { json } from '@sveltejs/kit';
 // IMPORTANT: update all these property values in src/lib/config.js
 import { siteTitle, siteDescription, siteURL, siteLink } from '$lib/config';
 
@@ -17,10 +18,9 @@ export const GET = async () => {
 		'Cache-Control': `max-age=0, s-max-age=${600}`,
 		'Content-Type': 'application/xml'
 	};
-	return {
-		body,
+	return json(body, {
 		headers
-	};
+	});
 };
 
 //Be sure to review and replace any applicable content below!
@@ -32,16 +32,16 @@ const render = (posts) => `<?xml version="1.0" encoding="UTF-8" ?>
 <link>${siteLink}</link>
 <atom:link href="https://${siteURL}/rss.xml" rel="self" type="application/rss+xml"/>
 ${posts
-		.map(
-			(post) => `<item>
+	.map(
+		(post) => `<item>
 <guid isPermaLink="true">https://${siteURL}/projects/${post.slug}</guid>
 <title>${post.title}</title>
 <link>https://${siteURL}/projects/${post.slug}</link>
 <description>${post.excerpt}</description>
 <pubDate>${new Date(post.date).toUTCString()}</pubDate>
 </item>`
-		)
-		.join('')}
+	)
+	.join('')}
 </channel>
 </rss>
 `;
