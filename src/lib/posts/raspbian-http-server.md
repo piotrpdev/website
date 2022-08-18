@@ -1,12 +1,12 @@
 ---
-title: "Raspbian HTTP Server"
-date: "2022-05-19"
-updated: "2022-05-19"
-categories: 
-  - "electronics"
-  - "raspberry pi"
-  - "web"
-coverImage: "/project-media/raspbian-http-server/thumb.png"
+title: 'Raspbian HTTP Server'
+date: '2022-05-19'
+updated: '2022-05-19'
+categories:
+  - 'electronics'
+  - 'raspberry pi'
+  - 'web'
+coverImage: '/project-media/raspbian-http-server/thumb.png'
 coverWidth: 16
 coverHeight: 9
 excerpt: Turning on an LED with the power of the Pi

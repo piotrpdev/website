@@ -1,120 +1,119 @@
 @use './vars';
 
 .callout {
-  background: var(--lightAccent);
-  padding: 2rem;
-  width: calc(100% + 4rem);
-  max-width: unset;
-  margin: 2rem 0 2rem -2rem;
-  font-style: italic;
-  border-radius: 0.125rem;
+	background: var(--lightAccent);
+	padding: 2rem;
+	width: calc(100% + 4rem);
+	max-width: unset;
+	margin: 2rem 0 2rem -2rem;
+	font-style: italic;
+	border-radius: 0.125rem;
 }
 
 .pagination {
-  margin: 0 0 1rem;
+	margin: 0 0 1rem;
 
-  ul {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: start;
-    list-style-type: none;
-    gap: 0.5rem;
-    margin: 0;
-    padding: 0;
+	ul {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: start;
+		list-style-type: none;
+		gap: 0.5rem;
+		margin: 0;
+		padding: 0;
 
-    li {
-      margin: 0;
-    }
+		li {
+			margin: 0;
+		}
 
-    a {
-      background: var(--lightAccent);
-      text-decoration: none;
-      line-height: 1;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      width: 2em;
-      height: 2em;
-      font-family: var(--primaryFont);
-      font-weight: bold;
-      transition: background .1s;
+		a {
+			background: var(--lightAccent);
+			text-decoration: none;
+			line-height: 1;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			width: 2em;
+			height: 2em;
+			font-family: var(--primaryFont);
+			font-weight: bold;
+			transition: background 0.1s;
 
-      &:hover {
-        background: var(--accent);
-        color: var(--background);
-      }
+			&:hover {
+				background: var(--accent);
+				color: var(--background);
+			}
 
-      &[aria-current="true"] {
-        background: var(--accent);
-        color: var(--background);
-        border: 1px solid currentColor;
-      }
-    }
-
-  }
+			&[aria-current='true'] {
+				background: var(--accent);
+				color: var(--background);
+				border: 1px solid currentColor;
+			}
+		}
+	}
 }
 
 .toc {
-  position: var(--tocPosition);
-  left: calc(30vw - 480px);
+	position: var(--tocPosition);
+	left: calc(30vw - 480px);
 
-  box-shadow: var(--shadow) 0px 7px 29px 0px;
+	box-shadow: var(--shadow) 0px 7px 29px 0px;
 
-  a {
-    text-decoration: none;
+	a {
+		text-decoration: none;
 
-    &:hover {
-      text-decoration: underline;
-    }
-  }
+		&:hover {
+			text-decoration: underline;
+		}
+	}
 
-  &-link-h1 {
-    font-weight: bold;
-  }
+	&-link-h1 {
+		font-weight: bold;
+	}
 
-  &-level-1 {
-    list-style-type: none;
-  }
+	&-level-1 {
+		list-style-type: none;
+	}
 
-  &-level-2 {
-    list-style-type: disc;
-  }
+	&-level-2 {
+		list-style-type: disc;
+	}
 
-  &-item-h2 {
-    margin-top: 0.5rem;
-  }
+	&-item-h2 {
+		margin-top: 0.5rem;
+	}
 
-  &-level-3 {
-    margin-top: 0.25rem;
-    list-style-type: circle;
-  }
+	&-level-3 {
+		margin-top: 0.25rem;
+		list-style-type: circle;
+	}
 
-  article & {
-    top: var(--tocTop);
-  }
+	article & {
+		top: var(--tocTop);
+	}
 
-  *.toc-level-1 {
-    margin-right: 2rem;
-  }
+	*.toc-level-1 {
+		margin-right: 2rem;
+	}
 
-  background-color: var(--lighterAccent);
-  border-radius: 0.25rem;
+	background-color: var(--lighterAccent);
+	border-radius: 0.25rem;
 
-  @media (max-width: 1600px) {
-    display: none;
-  }
+	@media (max-width: 1600px) {
+		display: none;
+	}
 }
 
 .epochCounter {
-  font-family: var(--codeFont);
-  background-color: var(--lighterAccent);
-  padding-left: 0.25rem;
-  padding-right: 0.25rem;
-  margin-left: 0.25rem;
-  margin-right: 0.25rem;
-  border-radius: 0.25rem;
-  
-  &:hover {
-    cursor: pointer;
-  }
+	font-family: var(--codeFont);
+	background-color: var(--lighterAccent);
+	padding-left: 0.25rem;
+	padding-right: 0.25rem;
+	margin-left: 0.25rem;
+	margin-right: 0.25rem;
+	border-radius: 0.25rem;
+
+	&:hover {
+		cursor: pointer;
+	}
 }

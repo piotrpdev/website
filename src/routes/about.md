@@ -1,4 +1,5 @@
 <svelte:head>
+
   <title>About</title>
 </svelte:head>
 
@@ -22,7 +23,7 @@ If you want to check out some of it or message me, look at the [Contact](/contac
 
 ## How did you get started?
 
-I have been passionate about programming for <EpochCounter /> so far, starting off with C++ back in 2018, *not a choice I would recommend for the begineer programmer*. This is an excerpt from one of my first programs:
+I have been passionate about programming for <EpochCounter /> so far, starting off with C++ back in 2018, _not a choice I would recommend for the begineer programmer_. This is an excerpt from one of my first programs:
 
 ```cpp
 int main() {
@@ -54,34 +55,33 @@ return 0;
 }
 ```
 
-Not very pretty, but everyone starts somewhere. I still remember ocassionaly hopping on [CodeBlocks](https://www.codeblocks.org/) and being fascinated by what you can do by typing out what seemed like nonsense to me at the time. At this point, I was mostly just messing around to see what you could do with this *"programming"* stuff.
+Not very pretty, but everyone starts somewhere. I still remember ocassionaly hopping on [CodeBlocks](https://www.codeblocks.org/) and being fascinated by what you can do by typing out what seemed like nonsense to me at the time. At this point, I was mostly just messing around to see what you could do with this _"programming"_ stuff.
 
-### Becoming a criminal *(maybe)*
+### Becoming a criminal _(maybe)_
 
-
-At the start of 2020, I began what I would consider to be my first ***actual*** project: a [*Price Tracker*](https://github.com/piotrpdev/WeBuy-Cex-Price-Tracker); a Python script that scraped the Irish [CeX](https://ie.webuy.com/) website and uploaded the results to [Google Sheets](https://www.google.com/sheets/about/).
+At the start of 2020, I began what I would consider to be my first **_actual_** project: a [_Price Tracker_](https://github.com/piotrpdev/WeBuy-Cex-Price-Tracker); a Python script that scraped the Irish [CeX](https://ie.webuy.com/) website and uploaded the results to [Google Sheets](https://www.google.com/sheets/about/).
 
 <div class="media-container"><img class="media" alt="demo of project" src="https://github.com/piotrpdev/WeBuy-Cex-Price-Tracker/raw/master/captures/sheet.gif" /></div>
 
 Me and a friend noticed that the prices on the website would occasionally shift, so naturally, we aimed to ~~manipulate the stock market~~ record the trends and see if we could score a deal.
 
-This was my first exposure to web scraping, which means I had *absolutely no clue where to even begin*. Thankfully, many kind people on the internet have made tutorials on how to do this exact thing. I considered using C++ initially ~~thank god I didn't~~ but after seeing all the web scraping tutorials used Python, I settled on that. *I then proceeded to waste several days of my life by using [BeautfiulSoup](https://www.crummy.com/software/BeautifulSoup/bs4/doc/) before learning what API's are and then having to completely rewrite the whole thing. Ah, the wonders of programming*.
+This was my first exposure to web scraping, which means I had _absolutely no clue where to even begin_. Thankfully, many kind people on the internet have made tutorials on how to do this exact thing. I considered using C++ initially ~~thank god I didn't~~ but after seeing all the web scraping tutorials used Python, I settled on that. _I then proceeded to waste several days of my life by using [BeautfiulSoup](https://www.crummy.com/software/BeautifulSoup/bs4/doc/) before learning what API's are and then having to completely rewrite the whole thing. Ah, the wonders of programming_.
 
-Looking back, I made a lot of bad choices and errors along the way, mainly using Google Sheets instead of a database *(this occasionally made me want to bang my head against the wall)*. However, I also think this was a *great* learning experience. Sure, it was *very* janky, it broke *constantly*, and it made me *very* mad sometimes, but it taught me how much fun you could have programming and how you could make stuff that is actually useful, even by yourself.
+Looking back, I made a lot of bad choices and errors along the way, mainly using Google Sheets instead of a database _(this occasionally made me want to bang my head against the wall)_. However, I also think this was a _great_ learning experience. Sure, it was _very_ janky, it broke _constantly_, and it made me _very_ mad sometimes, but it taught me how much fun you could have programming and how you could make stuff that is actually useful, even by yourself.
 
 At this point in my life, I had to effectively decide my future: settle on a college, what to actually study, etc. and honestly, I was pretty lost; I had hobbies, but nothing I could realistically pursue as a career, and that scared me. I didn't like the possibility that I could settle on a career that I would eventually end up hating and be stuck with for the rest of my life.
 
 The offhand choice to work on this project singlehandedly **changed my life** and was the main factor that made me want to become a programmer instead of going into medicine or something like that. Without this project, I could have been in a much darker place in my life right now, however, I am now much happier and excited for the future.
 
-> *Hold on, what about the criminal part?*
+> _Hold on, what about the criminal part?_
 
-Oh yeah, forgot about that. Turns out that [CeX's terms](https://ie.webuy.com/site/terms/) *may* prohibit the compilation of any parts of their site e.g. prices and/or also hold copyright over them making what I did *technically* "illegal". But my project is on [GitHub](https://github.com/piotrpdev/WeBuy-Cex-Price-Tracker) and I promise it was for, um, *educational purposes?* Yeah, that's it. *~~Disclaimer: This is a joke please don't sue me~~*.
+Oh yeah, forgot about that. Turns out that [CeX's terms](https://ie.webuy.com/site/terms/) _may_ prohibit the compilation of any parts of their site e.g. prices and/or also hold copyright over them making what I did _technically_ "illegal". But my project is on [GitHub](https://github.com/piotrpdev/WeBuy-Cex-Price-Tracker) and I promise it was for, um, _educational purposes?_ Yeah, that's it. _~~Disclaimer: This is a joke please don't sue me~~_.
 
 ### What happened next?
 
 During the past couple of years I have dove headfirst into programming and have worked on a lot of projects. You can find most of them on my [GitHub](https://github.com/piotrpdev) page and/or this [website](/projects).
 
-If you're curious why I stuck with JavaScript instead of Python or C++, it actually relates to what happened *after* the above story. TL;DR I got curious about modding [Discord](https://discord.com/) and proceeded to dive down a *massive* rabithole where I ended up falling in love with the language. *Acutally, it might be more of a love/hate relationship now that I think about it*...
+If you're curious why I stuck with JavaScript instead of Python or C++, it actually relates to what happened _after_ the above story. TL;DR I got curious about modding [Discord](https://discord.com/) and proceeded to dive down a _massive_ rabithole where I ended up falling in love with the language. _Acutally, it might be more of a love/hate relationship now that I think about it_...
 
 ## What hobbies are you into?
 
@@ -97,4 +97,4 @@ Those are the most notable ones. Apart from that, [Science](https://www.youtube.
 
 [A part of it](https://github.com/piotrpdev/website), but a lot of the work was done by [Josh Collinsworth](https://github.com/josh-collinsworth/sveltekit-blog-starter). Go check him out, he makes awesome stuff!
 
-By the way, this website was built using [SvelteKit](https://kit.svelte.dev/) and is hosted on [Netlify](https://www.netlify.com/) (*because Vercel is having troubles hosting it*).
+By the way, this website was built using [SvelteKit](https://kit.svelte.dev/) and is hosted on [Netlify](https://www.netlify.com/) (_because Vercel is having troubles hosting it_).

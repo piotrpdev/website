@@ -1,76 +1,72 @@
 <!-- This file handles any /blog/page/x route for pagination -->
-
 <script context="module">
-  import { postsPerPage, siteDescription } from '$lib/config'
-  import fetchPosts from '$lib/assets/js/fetchPosts'
+	import { postsPerPage, siteDescription } from '$lib/config';
+	import fetchPosts from '$lib/assets/js/fetchPosts';
 
-  export const load = async ({ fetch, params }) => {
-    try {
-      const page = params.page ? params.page : 1
+	export const load = async ({ fetch, params }) => {
+		try {
+			const page = params.page ? params.page : 1;
 
-      // Keeps from duplicationg the blog index route as page 1
-      if (page <= 1) {
-        return {
-          status: 301,
-          redirect: '/projects'
-        }
-      }
-      
-      let offset = (page * postsPerPage) - postsPerPage
-    
-      const totalPostsRes = await fetch('/api/posts/count.json')
-      const { total } = await totalPostsRes.json()
-      const { posts } = await fetchPosts({ offset, page })
-      
-      return {
-        status: 200,
-        props: {
-          posts,
-          page,
-          totalPosts: total
-        }
-      }
-    } catch(error) {
-      return {
-        status: 404,
-        error: error.message
-      }
-    }
-  }
+			// Keeps from duplicationg the blog index route as page 1
+			if (page <= 1) {
+				return {
+					status: 301,
+					redirect: '/projects'
+				};
+			}
+
+			let offset = page * postsPerPage - postsPerPage;
+
+			const totalPostsRes = await fetch('/api/posts/count.json');
+			const { total } = await totalPostsRes.json();
+			const { posts } = await fetchPosts({ offset, page });
+
+			return {
+				status: 200,
+				props: {
+					posts,
+					page,
+					totalPosts: total
+				}
+			};
+		} catch (error) {
+			return {
+				status: 404,
+				error: error.message
+			};
+		}
+	};
 </script>
-
 
 <script>
-  import PostsList from '$lib/components/PostsList.svelte'
-  import Pagination from '$lib/components/Pagination.svelte'
+	import PostsList from '$lib/components/PostsList.svelte';
+	import Pagination from '$lib/components/Pagination.svelte';
 
-  export let page
-  export let totalPosts
-  export let posts = []
+	export let page;
+	export let totalPosts;
+	export let posts = [];
 
-  $: lowerBound = (page * postsPerPage) - (postsPerPage - 1) || 1
-  $: upperBound = Math.min(page * postsPerPage, totalPosts)
+	$: lowerBound = page * postsPerPage - (postsPerPage - 1) || 1;
+	$: upperBound = Math.min(page * postsPerPage, totalPosts);
 </script>
-
 
 <svelte:head>
 	<title>Projects - page {page}</title>
-	<meta data-key="description" name="description" content={siteDescription}>
+	<meta data-key="description" name="description" content={siteDescription} />
 </svelte:head>
-
 
 <!-- TODO: this is duplicated in both `[page].svelte` files -->
 {#if posts.length}
-  <h1>Posts {lowerBound}–{upperBound} of {totalPosts}</h1>
-  <Pagination currentPage={page} {totalPosts} />
+	<h1>Posts {lowerBound}–{upperBound} of {totalPosts}</h1>
+	<Pagination currentPage={page} {totalPosts} />
 
-  <PostsList {posts} />
+	<PostsList {posts} />
 
-  <Pagination currentPage={page} {totalPosts} />
+	<Pagination currentPage={page} {totalPosts} />
 {:else}
-  <h1>Oops!</h1>
+	<h1>Oops!</h1>
 
-  <p>Sorry, no posts to show here.</p>
+	<p>Sorry, no posts to show here.</p>
 
-  <a href="/projects">Back to projects</a>
+	<a href="/projects">Back to projects</a>
 {/if}

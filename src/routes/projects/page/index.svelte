@@ -1,8 +1,8 @@
 <script context="module">
-  export const load = () => {
-    return {
-      status: 301,
-      redirect: '/projects'
-    }
-  }
+	export const load = () => {
+		return {
+			status: 301,
+			redirect: '/projects'
+		};
+	};
 </script>

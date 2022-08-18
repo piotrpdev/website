@@ -1,11 +1,11 @@
 ---
-title: "CAO Calculator"
-date: "2021-02-26"
-updated: "2022-08-18"
-categories: 
-  - "mobile"
-  - "design"
-coverImage: "/project-media/cao-calculator/thumb.png"
+title: 'CAO Calculator'
+date: '2021-02-26'
+updated: '2022-08-18'
+categories:
+  - 'mobile'
+  - 'design'
+coverImage: '/project-media/cao-calculator/thumb.png'
 coverWidth: 16
 coverHeight: 9
 excerpt: Android app that helps calculate how many CAO points you need to qualify for a course.
@@ -15,7 +15,7 @@ excerpt: Android app that helps calculate how many CAO points you need to qualif
     import FigmaFrame from '$lib/components/FigmaFrame.svelte'
 </script>
 
-> *DISCLAIMER: This is an adaptation of a Word document I have written that showcases parts of the creation process for this app (for the ISE module of my course). You can download it [here](/project-media/cao-calculator/App.docx). <br><br> [I actually made the app](https://leavingcertcao.xyz/) long **before** writing the document, but wrote it in past-tense anyway.*
+> _DISCLAIMER: This is an adaptation of a Word document I have written that showcases parts of the creation process for this app (for the ISE module of my course). You can download it [here](/project-media/cao-calculator/App.docx). <br><br> [I actually made the app](https://leavingcertcao.xyz/) long **before** writing the document, but wrote it in past-tense anyway._
 
 ## Introduction
 
@@ -23,11 +23,12 @@ As you probably saw in the description, this project is dedicated to a [CAO](htt
 
 There are many similar apps on the Google Play store:
 
-* [“*Leaving Cert CAO Points Calculator*”](https://play.google.com/store/apps/details?id=com.pointscalculate) by “*CareersPortal*”
-    * This is an app that performs exactly what I want my app to do. However, I am not a fan of its UI; I think the design isn’t very modern. I would also prefer if I could see all the subjects, grades and points presented at the same time in a nice-looking way. I do like the simple colour scheme which makes the app easy to look at.
+- [“_Leaving Cert CAO Points Calculator_”](https://play.google.com/store/apps/details?id=com.pointscalculate) by “_CareersPortal_”
 
-* [“*Leaving Cert Points Calculator*”](https://play.google.com/store/apps/details?id=ie.psdcon.paul.leavingcertcalculator) by “*Paul Connolly*”
-    * This app also performs all the features I would like to have, it even displays all the data at the same time. However, again, I think the UI isn’t very nice; It is very plain-looking and the lack of contrast doesn’t add emphasis on the important elements. Again, I like the simple colour scheme, and I wouldn’t mind using this app.
+  - This is an app that performs exactly what I want my app to do. However, I am not a fan of its UI; I think the design isn’t very modern. I would also prefer if I could see all the subjects, grades and points presented at the same time in a nice-looking way. I do like the simple colour scheme which makes the app easy to look at.
+
+- [“_Leaving Cert Points Calculator_”](https://play.google.com/store/apps/details?id=ie.psdcon.paul.leavingcertcalculator) by “_Paul Connolly_”
+  - This app also performs all the features I would like to have, it even displays all the data at the same time. However, again, I think the UI isn’t very nice; It is very plain-looking and the lack of contrast doesn’t add emphasis on the important elements. Again, I like the simple colour scheme, and I wouldn’t mind using this app.
 
 ## Product Vision
 
@@ -42,29 +43,32 @@ App features are the functions and capabilities of an app. They are the reasons 
 I have decided on four main features:
 
 1. Save & Load
-    * There will be a Save/Load button at the bottom of the main screen that lets you save and load sets of subjects and grades.
-    * It will let you set the name for a new set, and rename other sets.
-    * It will store these in the phone's storage in easy to access files so the user can copy them over to other devices.
+
+   - There will be a Save/Load button at the bottom of the main screen that lets you save and load sets of subjects and grades.
+   - It will let you set the name for a new set, and rename other sets.
+   - It will store these in the phone's storage in easy to access files so the user can copy them over to other devices.
 
 2. Dark and Light themes
-    * The app will have an option to switch between dark and light mode in the settings.
-    * This option will change the colour scheme of the app.
-    * It will let you customize the look of the app.
-    * It will make the app look nicer and more modern.
+
+   - The app will have an option to switch between dark and light mode in the settings.
+   - This option will change the colour scheme of the app.
+   - It will let you customize the look of the app.
+   - It will make the app look nicer and more modern.
 
 3. Subject and Grade input
-    * You will be presented with a list of default/typical subjects at the start.
-    * You will be able to easily change the subject and the grade you are planning to get.
-    * There will be options for all subject and all levels including ordinary and higher level.
-    * The subject and grade will be shown beside each other, and sets of these will be displayed in an aesthetically pleasing, and easy to read list.
-    * You will be able to add and remove subjects to suit your needs.
+
+   - You will be presented with a list of default/typical subjects at the start.
+   - You will be able to easily change the subject and the grade you are planning to get.
+   - There will be options for all subject and all levels including ordinary and higher level.
+   - The subject and grade will be shown beside each other, and sets of these will be displayed in an aesthetically pleasing, and easy to read list.
+   - You will be able to add and remove subjects to suit your needs.
 
 4. Point calculation
-    * There will be a number beside the subject and grade that shows how many CAO points the aforementioned combination will achieve.
-    * There will be a circular loading bar around the points that visually shows how good the amount of points is.
-    * This loading bar will be animated and smoothly transition to different lengths when the points change.
-    * The total points from all the grades combined will be shown at the bottom of the main screen to easily display what points you will get from the set.
-    * There calculator will factor in and display bonus points e.g. for higher level maths.
+   - There will be a number beside the subject and grade that shows how many CAO points the aforementioned combination will achieve.
+   - There will be a circular loading bar around the points that visually shows how good the amount of points is.
+   - This loading bar will be animated and smoothly transition to different lengths when the points change.
+   - The total points from all the grades combined will be shown at the bottom of the main screen to easily display what points you will get from the set.
+   - There calculator will factor in and display bonus points e.g. for higher level maths.
 
 I have decided on these features because I think they are the most essential elements that the app must have. The main reason for the existence of the app is to help calculate and keep track of CAO points, so calculation and storage of CAO points must be the two main features. I decided on the two themes as a main feature because there are already some competitors in the field, however they aren't very modern; these themes will make the app stand out and appeal to the new generation of Leaving Certificate students.
 
@@ -92,9 +96,9 @@ I mainly chose it because I have worked in it many times, and find it is a very 
 
 If I was making this app, I would use [Expo](https://expo.dev/) and [React Native Paper](https://callstack.github.io/react-native-paper/). Expo is tool that allows you to easily create apps for both iOS and Android; It lets you write the app once, and then creates and publishes the actual app files to the respective app stores on both platforms. It uses the JavaScript programming language, which is easy to learn and I think is quite intuitive.
 
-React Native Paper is a *component library*, put simply it provides pre-written pieces of code that can be used to add elements such as buttons to your app. I would use this specific component library because it is popular among apps, and I think it looks nice.
+React Native Paper is a _component library_, put simply it provides pre-written pieces of code that can be used to add elements such as buttons to your app. I would use this specific component library because it is popular among apps, and I think it looks nice.
 
-*Many* other tools and programming languages could also be used to make this app. The most popular choices include Android Studio (an IDE used to make Android apps), Flutter (UI SDK used to create cross-platform apps) and others.
+_Many_ other tools and programming languages could also be used to make this app. The most popular choices include Android Studio (an IDE used to make Android apps), Flutter (UI SDK used to create cross-platform apps) and others.
 
 ## Conclusion
 
@@ -104,4 +108,4 @@ When I was attending secondary school, I always wanted an app like this. I would
 
 I think that with the features and prototypes provided in this document, realising the ideas and implementing them in a real product would be very manageable. Researching this app idea was fun, and I definitely learned a lot about planning and determining the feasibility of an idea.
 
-> *Like I said before, I actually already made the app. Check it out [here](https://leavingcertcao.xyz/).*
+> _Like I said before, I actually already made the app. Check it out [here](https://leavingcertcao.xyz/)._
