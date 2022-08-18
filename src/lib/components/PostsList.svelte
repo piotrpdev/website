@@ -18,10 +18,9 @@
           <h2>
             {post.title}
           </h2>
+          <p>{post.excerpt}</p>
         </a>
       </article>
-
-      <p>{post.excerpt}</p>
     </li>
   {/each}
 </ul>

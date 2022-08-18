@@ -99,8 +99,22 @@ li {
     border: 2px solid var(--lighterAccent);
     border-radius: 0.3rem;
 
+    a {
+      padding-bottom: 18px;
+    }
+
     h2, p {
       padding-left: 2rem;
+    }
+
+    p {
+      margin-bottom: 0;
+    }
+
+    &:hover {
+      a h2 {
+        color: var(--art-hover);
+      }
     }
 
     //padding: 1rem 2rem;
