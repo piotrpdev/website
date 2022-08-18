@@ -10,7 +10,7 @@
 
 ## Who are you?
 
-<div class="pfp-container"><img class="pfp" src="/images/pfp.jpg" /></div>
+<div class="pfp-container"><img class="pfp" alt="avatar" src="/images/pfp.jpg" /></div>
 
 Hi, my name is Piotr, but you can call Peter.
 
@@ -61,7 +61,7 @@ Not very pretty, but everyone starts somewhere. I still remember ocassionaly hop
 
 At the start of 2020, I began what I would consider to be my first ***actual*** project: a [*Price Tracker*](https://github.com/piotrpdev/WeBuy-Cex-Price-Tracker); a Python script that scraped the Irish [CeX](https://ie.webuy.com/) website and uploaded the results to [Google Sheets](https://www.google.com/sheets/about/).
 
-<div class="media-container"><img class="media" src="https://github.com/piotrpdev/WeBuy-Cex-Price-Tracker/raw/master/captures/sheet.gif" /></div>
+<div class="media-container"><img class="media" alt="demo of project" src="https://github.com/piotrpdev/WeBuy-Cex-Price-Tracker/raw/master/captures/sheet.gif" /></div>
 
 Me and a friend noticed that the prices on the website would occasionally shift, so naturally, we aimed to ~~manipulate the stock market~~ record the trends and see if we could score a deal.
 

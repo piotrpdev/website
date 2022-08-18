@@ -10,7 +10,7 @@
         <a href="/projects/{post.slug}">
           <img
           src={post.coverImage}
-          alt=""
+          alt="Post cover"
           width={post.coverWidth}
           height={post.coverHeight}
           style="ratio: {post.coverWidth} / {post.coverHeight}"

@@ -22,7 +22,8 @@
 
 
 <script>
-import { browser } from '$app/env';
+  import { browser } from '$app/env';
+  import fixYTVideos from '$lib/assets/js/fixYTVideos';
 
   import { onMount } from 'svelte';
 
@@ -36,6 +37,8 @@ import { browser } from '$app/env';
       if (document.querySelector("article>h2") === null) {
         document.querySelector(".toc").remove()
       }
+
+      fixYTVideos();
     }
   })
 </script>
@@ -62,7 +65,7 @@ import { browser } from '$app/env';
   <img
     class="cover-image"
     src="{coverImage}"
-    alt=""
+    alt="post cover"
     style="aspect-ratio: {coverWidth} / {coverHeight};"
     width={coverWidth}
     height={coverHeight}
