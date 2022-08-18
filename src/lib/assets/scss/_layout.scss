@@ -53,6 +53,20 @@ img {
 }
 
 .post {
+
+  @media (max-width: vars.$smMax) {
+    h1, .meta, .post-footer {
+      text-align: center;
+    }
+
+    h1 {
+      &::after {
+        left: 125%;
+        width: 50%;
+      }
+    }
+  }
+
   h1 {
     margin-bottom: 1rem;
   }
@@ -77,6 +91,22 @@ li {
 
   li {
     margin-bottom: 6rem;
+
+    background-color: var(--slatest);
+
+    box-shadow: var(--shadow) 0px 7px 29px 0px;
+
+    border: 2px solid var(--lighterAccent);
+    border-radius: 0.3rem;
+    padding: 1rem 2rem;
+
+    @media (max-width: vars.$smMax) {
+      padding: 1rem;
+
+      text-align: center;
+
+      box-shadow: var(--shadow) 0px 7px 20px 0px;
+    }
   }
 
   img + h2 {
