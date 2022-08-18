@@ -251,14 +251,47 @@ li {
   flex-direction: row;
   align-items: center;
   gap: 1rem;
-  margin-top: 2rem;
+  
+  &:not(:first-child) {
+    margin-top: 3rem;
+  }
+
+  &:hover {
+    a {
+      color: var(--hover);
+    }
+
+    cursor: pointer;
+  }
+
+  background-color: var(--slatest);
+
+  box-shadow: var(--shadow) 0px 7px 29px 0px;
+
+  border: 2px solid var(--lighterAccent);
+  border-radius: 0.3rem;
+  padding: 1rem 2rem;
 
   .media {
     width: 24rem;
   }
 
+  p {
+    margin-bottom: 0;
+  }
+
   @media (max-width: vars.$smMax) {
     flex-direction: column !important;
+
+    padding: 1rem;
+
+    text-align: center;
+
+    box-shadow: var(--shadow) 0px 7px 20px 0px;
+
+    &:not(:first-child) {
+      margin-top: 2rem;
+    }
 
     .media {
       width: 12rem;
@@ -275,7 +308,10 @@ li {
 }
 
 .projects-list {
+  margin-top: 2rem;
+
   @media (min-width: vars.$smMin) {
+    margin-top: 3rem;
     margin-left: -20%;
     margin-right: -20%;
     max-width: none;
