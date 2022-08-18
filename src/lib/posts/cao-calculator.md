@@ -15,7 +15,7 @@ excerpt: Android app that helps calculate how many CAO points you need to qualif
     import FigmaFrame from '$lib/components/FigmaFrame.svelte'
 </script>
 
-> *DISCLAIMER: This is an adaptation of a Word document I have written that showcases parts of the creation process for this app (for the ISE module of my course). You can download it [here](/project-media/cao-calculator/app.docx). <br><br> [I actually made the app](https://leavingcertcao.xyz/) long **before** writing the document, but wrote it in past-tense anyway.*
+> *DISCLAIMER: This is an adaptation of a Word document I have written that showcases parts of the creation process for this app (for the ISE module of my course). You can download it [here](/project-media/cao-calculator/App.docx). <br><br> [I actually made the app](https://leavingcertcao.xyz/) long **before** writing the document, but wrote it in past-tense anyway.*
 
 ## Introduction
 
