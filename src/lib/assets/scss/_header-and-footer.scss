@@ -43,6 +43,7 @@ header {
     justify-content: center;
     flex-wrap: wrap;
     height: auto;
+    flex-direction: column;
   }
 
   .site-title {
@@ -57,7 +58,6 @@ header {
     font-weight: bold;
 
     @media (min-width: vars.$smMin) {
-      width: 100%;
       font-size: 1.6rem;
     }
   }
