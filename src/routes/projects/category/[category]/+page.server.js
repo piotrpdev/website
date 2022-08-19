@@ -1,10 +1,10 @@
 import fetchPosts from '$lib/assets/js/fetchPosts';
 
-export const load = async ({ params, fetch }) => {
+export const load = async ({ url, params }) => {
 	const category = params.category;
 	const options = { category };
 	const { posts } = await fetchPosts(options);
-	const res = await fetch(`/api/posts/category/${category}/count.json`);
+	const res = await fetch(`${url.origin}/api/posts/category/${category}/count.json`);
 	const { total } = await res.json();
 
 	return {
