@@ -61,7 +61,7 @@ Not very pretty, but everyone starts somewhere. I still remember ocassionaly hop
 
 At the start of 2020, I began what I would consider to be my first **_actual_** project: a [_Price Tracker_](https://github.com/piotrpdev/WeBuy-Cex-Price-Tracker); a Python script that scraped the Irish [CeX](https://ie.webuy.com/) website and uploaded the results to [Google Sheets](https://www.google.com/sheets/about/).
 
-<div class="media-container"><img class="media" alt="demo of project" src="https://github.com/piotrpdev/WeBuy-Cex-Price-Tracker/raw/master/captures/sheet.gif" /></div>
+<div class="media-container"><img class="media" alt="demo of project" src="images/sheet.jpg" /></div>
 
 Me and a friend noticed that the prices on the website would occasionally shift, so naturally, we aimed to ~~manipulate the stock market~~ record the trends and see if we could score a deal.
 
@@ -91,7 +91,7 @@ I **love** music, [I even compose my own sometimes](https://musescore.com/piotrb
 
 I also like messing around with electronics sometimes. I have worked on a couple of small projects ~~and tried soldering a few times~~ involving the Arduino, ESP32, and Raspberry Pi.
 
-Those are the most notable ones. Apart from that, [Science](https://www.youtube.com/user/vsauce), [Maths](https://www.youtube.com/c/3blue1brown), [Flight Simulation](https://www.youtube.com/user/Airforceproud95), [Philosophy](https://www.youtube.com/c/Exurb1a), [English](https://www.dictionaryofobscuresorrows.com/), [Gaming](/images/gmod.png), [Retro Gaming](/images/pkmn.jpg), etc. Again, a bit of everything.
+Those are the most notable ones. Apart from that, [Science](https://www.youtube.com/user/vsauce), [Maths](https://www.youtube.com/c/3blue1brown), [Flight Simulation](https://www.youtube.com/user/Airforceproud95), [Philosophy](https://www.youtube.com/c/Exurb1a), [English](https://www.dictionaryofobscuresorrows.com/), [Gaming](/images/gmod.jpg), [Retro Gaming](/images/pkmn.jpg), etc. Again, a bit of everything.
 
 ## Did you make this website?
 

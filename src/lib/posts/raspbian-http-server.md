@@ -6,7 +6,7 @@ categories:
   - 'electronics'
   - 'raspberry pi'
   - 'web'
-coverImage: '/project-media/raspbian-http-server/thumb.png'
+coverImage: '/project-media/raspbian-http-server/thumb.jpg'
 coverWidth: 16
 coverHeight: 9
 excerpt: Turning on an LED with the power of the Pi

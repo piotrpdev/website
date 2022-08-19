@@ -3,7 +3,7 @@
 
 	const projects = [
 		{
-			thumb: 'https://github.com/piotrpdev/cao-calculator/raw/main/.github/images/home_dark.png',
+			thumb: '/images/cao-dark.jpg',
 			link: 'https://leavingcertcao.xyz/',
 			title: 'CAO Calculator',
 			description:
@@ -11,7 +11,7 @@
 			school: null
 		},
 		{
-			thumb: 'https://github.com/piotrpdev/WeBuy-Cex-Price-Tracker/raw/master/captures/sheet.gif',
+			thumb: '/images/sheet.jpg',
 			link: 'https://github.com/piotrpdev/WeBuy-Cex-Price-Tracker',
 			title: 'WeBuy Cex Price Tracker',
 			description:
@@ -19,8 +19,7 @@
 			school: null
 		},
 		{
-			thumb:
-				'https://github.com/piotrpdev/WIT-Timetable-Generator/raw/main/.github/example/example.png',
+			thumb: '/images/wit-timetable.png',
 			link: 'https://github.com/piotrpdev/WIT-Timetable-Generator',
 			title: 'WIT Timetable Generator',
 			description:
@@ -28,7 +27,7 @@
 			school: null
 		},
 		{
-			thumb: '/images/wd1ca1.png',
+			thumb: '/images/wd1ca1.jpg',
 			link: 'https://peter-wd2ca1.netlify.app/',
 			title: 'Sun Tracker™',
 			description:
@@ -36,7 +35,7 @@
 			school: 'Semester 2'
 		},
 		{
-			thumb: '/images/wd1ca2.png',
+			thumb: '/images/wd1ca2.jpg',
 			link: 'https://peter-wd1ca2.netlify.app/',
 			title: 'Rosslare Tidy Towns',
 			description:
