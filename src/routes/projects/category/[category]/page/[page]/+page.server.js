@@ -28,6 +28,7 @@ export const load = async ({ url, params }) => {
 			totalPosts: total
 		};
 	} catch (err) {
+		if (err.status === 301) throw redirect(301, err.location);
 		throw error(404, err.message);
 	}
 };
