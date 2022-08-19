@@ -31,16 +31,16 @@ const render = (posts) => `<?xml version="1.0" encoding="UTF-8" ?>
 <link>${siteLink}</link>
 <atom:link href="https://${siteURL}/rss.xml" rel="self" type="application/rss+xml"/>
 ${posts
-		.map(
-			(post) => `<item>
+	.map(
+		(post) => `<item>
 <guid isPermaLink="true">https://${siteURL}/projects/${post.slug}</guid>
 <title>${post.title}</title>
 <link>https://${siteURL}/projects/${post.slug}</link>
 <description>${post.excerpt}</description>
 <pubDate>${new Date(post.date).toUTCString()}</pubDate>
 </item>`
-		)
-		.join('')}
+	)
+	.join('')}
 </channel>
 </rss>
 `;
