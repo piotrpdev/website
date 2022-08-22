@@ -86,7 +86,7 @@
 		{updated}
 	</div>
 
-	{@html PostContent}
+	<svelte:component this={PostContent} />
 
 	{#if categories}
 		<aside class="post-footer">

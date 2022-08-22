@@ -6,6 +6,7 @@ export const load = async ({ url }) => {
 
 	posts.forEach((post) => {
 		post.categories.forEach((category) => {
+			// eslint-disable-next-line no-prototype-builtins
 			if (uniqueCategories.hasOwnProperty(category)) {
 				uniqueCategories[category].count += 1;
 			} else {
