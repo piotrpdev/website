@@ -215,6 +215,14 @@ li {
 	}
 }
 
+footer .socials {
+	gap: 1rem;
+
+	@media (min-width: vars.$smMin) {
+		gap: 2rem;
+	}
+}
+
 .socials {
 	display: flex;
 	flex-direction: row;
@@ -236,6 +244,11 @@ li {
 }
 
 .icon {
+	&:hover {
+		fill: var(--white);
+	}
+
+	fill: var(--badge-white);
 	width: 2.2rem;
 }
 

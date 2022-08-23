@@ -33,6 +33,11 @@
 	});
 </script>
 
+<svelte:head>
+	<!-- Preloads pfp on top of About page -->
+	<link rel="preload" as="image" href="/images/pfp.jpg" />
+</svelte:head>
+
 <!-- 
   The below markup is used on every page in the site. The <slot> is where the page's
   actual contents will show up.
