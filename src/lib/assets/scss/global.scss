@@ -26,3 +26,23 @@ body {
 	-moz-osx-font-smoothing: grayscale;
 	-webkit-font-smoothing: antialiased;
 }
+
+/* Works on Firefox */
+* {
+	scrollbar-width: thin;
+	scrollbar-color: var(--accent) rgba(255, 255, 255, 0);
+}
+
+/* Works on Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+	width: 12px;
+}
+
+*::-webkit-scrollbar-thumb {
+	&:hover {
+		background: var(--lightAccent);
+	}
+	background-color: var(--accent);
+	//border-radius: 20px;
+	//border: 3px solid orange;
+}
