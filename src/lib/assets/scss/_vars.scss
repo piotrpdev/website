@@ -41,6 +41,8 @@ $xxxlMin: 122.5rem;
 	--ink: var(--slate);
 	--paper: var(--background);
 
+	--red: #ef233c;
+
 	:where(h1, h2, h3, h4, h5, h6) {
 		color: var(--dark);
 	}
