@@ -9,6 +9,7 @@
 	let showError = false;
 
 	let formData = {
+		from_page: '',
 		name: '',
 		email: '',
 		message: ''
@@ -26,7 +27,7 @@
 	};
 
 	const handleSubmit = (e) => {
-		const { name, email, message } = formData;
+		const { name, email, message, from_page } = formData;
 
 		if (!name || !email || !message) {
 			showError = true;
