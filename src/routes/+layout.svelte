@@ -45,7 +45,13 @@
 <div class="layout" class:open={$isMenuOpen}>
 	<Header />
 	{#key path}
-		<main id="main" tabindex="-1" in:fade={transitionIn} out:fade={transitionOut}>
+		<main
+			id="main"
+			class={`${$currentPage === '/contact' ? 'full' : ''}`}
+			tabindex="-1"
+			in:fade={transitionIn}
+			out:fade={transitionOut}
+		>
 			<slot />
 		</main>
 	{/key}

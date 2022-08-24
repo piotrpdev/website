@@ -15,6 +15,10 @@ main {
 	margin: 6rem auto;
 	padding: 0 1rem;
 
+	&.full {
+		max-width: none;
+	}
+
 	article {
 		p > h2 {
 			color: var(--art-link);
@@ -432,5 +436,40 @@ footer .socials {
 		padding: 0.2rem 0.5rem;
 		margin: 1rem 0;
 		font-style: italic;
+	}
+}
+
+.contact-container {
+	display: flex;
+	flex-direction: column;
+	margin: auto;
+	max-width: 80%;
+
+	@media (max-width: vars.$smMin) {
+		max-width: 45rem;
+
+		.contact-main {
+			flex-direction: column;
+		}
+	}
+
+	@media (min-width: vars.$smMin) {
+		.contact-main {
+			display: flex;
+
+			& > div {
+				flex: 50%;
+			}
+
+			h2 {
+				margin-top: 0;
+			}
+
+			& > div:last-child {
+				margin-top: -48px;
+			}
+
+			gap: 8rem;
+		}
 	}
 }
