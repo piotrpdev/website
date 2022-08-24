@@ -12,8 +12,10 @@
 	<meta data-key="description" name="description" content={siteDescription} />
 </svelte:head>
 
-<h1>Projects</h1>
+<div class="projects-container">
+	<h1>Projects</h1>
 
-<PostsList {posts} />
+	<PostsList {posts} />
+</div>
 
 <Pagination currentPage={1} totalPosts={total} />

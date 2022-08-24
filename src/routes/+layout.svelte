@@ -15,6 +15,8 @@
 	const transitionIn = { delay: 150, duration: 150 };
 	const transitionOut = { duration: 100 };
 
+	const fullPages = ['/projects', '/contact'];
+
 	/**
 	 * Updates the global store with the current path. (Used for highlighting
 	 * the current page in the nav, but could be useful for other purposes.)
@@ -47,7 +49,7 @@
 	{#key path}
 		<main
 			id="main"
-			class={`${$currentPage === '/contact' ? 'full' : ''}`}
+			class={`${fullPages.includes($currentPage) ? 'full' : ''}`}
 			tabindex="-1"
 			in:fade={transitionIn}
 			out:fade={transitionOut}

@@ -95,6 +95,13 @@ li {
 	list-style-type: none;
 	padding: 0;
 
+	@media (min-width: vars.$smMin) {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		column-gap: 10px;
+		row-gap: 15px;
+	}
+
 	li {
 		margin-bottom: 4rem;
 
@@ -472,4 +479,18 @@ footer .socials {
 			gap: 8rem;
 		}
 	}
+}
+
+.projects-container {
+	max-width: 80%;
+	margin: auto;
+
+	@media (max-width: vars.$smMin) {
+		max-width: 45rem;
+	}
+}
+
+p > code,
+a code {
+	font-size: 1rem;
 }

@@ -101,13 +101,13 @@
 						required
 						title="Please enter a valid email address"
 						bind:value={formData.email}
-						placeholder="jamarius.quangledangle@disney.com"
+						placeholder="jamarius.quangledangle@hotmail.com"
 					/>
 				</div>
 			</div>
 
 			<div class="message-wrapper">
-				<label for="message">What's on your mind?</label>
+				<label for="message">Message</label>
 				<textarea
 					name="message"
 					bind:value={formData.message}
