@@ -24,23 +24,19 @@ excerpt: Windows-screenFetch but faster
 		}))
 	))
 
-    const totalsBarDataLabels = Object.keys(speedData["before"][0]).map((name) => {let newName = name.substring(4); if (newName.length > 12) newName = newName.substring(0, newName.length - 8); return newName})
-
-    const [subBeforeTotals, subAfterTotals] = [beforeTotals, afterTotals].map((totals) => Object.fromEntries(Object.entries(totals).map(([name, val]) => {let newName = name.substring(4); if (newName.length > 12) newName = newName.substring(0, newName.length - 8); return [newName, val]})))
-
     const totalsBarData = {
-		labels: totalsBarDataLabels,
+		labels: Object.keys(speedData["before"][0]),
 		datasets: [
 			{
 				label: 'Windows-screenFetch',
-				data: subBeforeTotals,
+				data: beforeTotals,
 				borderWidth: 2,
 				borderColor: 'rgba(255, 134, 159, 1)',
 				backgroundColor: 'rgba(255, 134,159,0.4)'
 			},
 			{
 				label: 'Windows-screenFetch-fast',
-				data: subAfterTotals,
+				data: afterTotals,
 				borderWidth: 2,
 				borderColor: 'rgba(98,  182, 239, 1)',
 				backgroundColor: 'rgba(98,  182, 239,0.4)'
@@ -60,6 +56,8 @@ TL;DR: [_Windows-screenFetch_](https://github.com/JulianChow94/Windows-screenFet
 11x faster (in my testing). Around 2 seconds to 0.2 seconds.
 
 > _2035.9979ms to 177.4912ms_
+
+> _NOTE: The following statistics exclude "Get-" from the function names for readability_
 
 <div class="hide-on-mobile">
     <h3>Average</h3>

@@ -29,6 +29,13 @@
 				}
 			},
 			scales: {
+				x: {
+					ticks: {
+						callback: function (value) {
+							return this.getLabelForValue(value).substring(4, 12);
+						}
+					}
+				},
 				y: {
 					title: {
 						display: true,
