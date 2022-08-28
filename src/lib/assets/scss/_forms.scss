@@ -22,8 +22,7 @@ input[type='submit'] {
 	width: max-content;
 	transition: background 0.2s;
 
-	&:hover,
-	&:focus {
+	&:hover {
 		background: var(--accent);
 	}
 }
