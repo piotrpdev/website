@@ -343,3 +343,25 @@
 		display: none;
 	}
 }
+
+.copy-code-button {
+	display: flex;
+	position: absolute;
+	border-radius: 25%;
+	border: 0;
+	top: 0.5rem;
+	right: 0.5rem;
+	padding: 0.25rem;
+	margin: 0;
+
+	&:hover {
+		cursor: pointer;
+	}
+
+	svg {
+		fill: currentColor;
+		transition: color 0.8s;
+		color: var(--lighterAccent);
+		width: 24px;
+	}
+}
