@@ -116,8 +116,15 @@ li {
 		border: 2px solid var(--lighterAccent);
 		border-radius: 0.3rem;
 
+		transition: transform 0.2s;
+
 		a {
+			height: 100%;
 			padding-bottom: 18px;
+		}
+
+		article {
+			height: 100%;
 		}
 
 		h2,
@@ -133,6 +140,8 @@ li {
 			a h2 {
 				color: var(--art-hover);
 			}
+
+			transform: translateY(-10px);
 		}
 
 		//padding: 1rem 2rem;
@@ -343,6 +352,8 @@ footer .socials {
 	align-items: center;
 	gap: 1rem;
 
+	transition: transform 0.2s;
+
 	&:not(:first-child) {
 		margin-top: 3rem;
 	}
@@ -351,6 +362,8 @@ footer .socials {
 		a {
 			color: var(--hover);
 		}
+
+		transform: translateY(-10px);
 
 		cursor: pointer;
 	}
