@@ -1,4 +1,11 @@
+<script>
+	export let cross;
+	const [send, receive] = cross;
+</script>
+
 <svg
+	in:send={{ key: 'dark' }}
+	out:receive={{ key: 'dark' }}
 	viewBox="0 0 122.88 122.89"
 	style="enable-background:new 0 0 122.88 122.89"
 	xml:space="preserve"

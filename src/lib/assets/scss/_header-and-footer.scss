@@ -120,6 +120,13 @@ header {
 			background: none;
 			border: none;
 
+			> div {
+				display: flex;
+				height: 32px;
+				width: 32px;
+				position: relative;
+			}
+
 			&:hover {
 				cursor: pointer;
 			}
@@ -132,6 +139,7 @@ header {
 			}
 
 			svg {
+				position: absolute;
 				color: var(--darker);
 				width: 32px;
 			}

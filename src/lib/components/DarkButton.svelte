@@ -1,5 +1,6 @@
 <script>
 	import { onMount } from 'svelte';
+	import { crossfade } from 'svelte/transition';
 	import SunSvg from './svg/SunSVG.svelte';
 	import MoonSvg from './svg/MoonSVG.svelte';
 	import { browser } from '$app/env';
@@ -48,12 +49,18 @@
 			window.matchMedia(DARK_PREFERENCE).addEventListener('change', applyTheme);
 		}
 	});
+
+	const cross = crossfade({
+		duration: 1000
+	});
 </script>
 
 <button class="dark-toggle" on:click={toggleTheme}>
-	{#if currentTheme === THEMES.LIGHT}
-		<SunSvg />
-	{:else}
-		<MoonSvg />
-	{/if}
+	<div>
+		{#if currentTheme === THEMES.LIGHT}
+			<SunSvg {cross} />
+		{:else}
+			<MoonSvg {cross} />
+		{/if}
+	</div>
 </button>
