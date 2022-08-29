@@ -10,6 +10,7 @@
 	import addCopyCodeButtons from '$lib/assets/js/addCopyCodeButtons';
 	import addTocButton from '$lib/assets/js/addTocButton';
 	import fixYTVideos from '$lib/assets/js/fixYTVideos';
+	import { siteLink, siteTitle } from '$lib/config';
 
 	import { onMount } from 'svelte';
 
@@ -58,17 +59,17 @@
 
 <svelte:head>
 	<!-- Be sure to add your image files and un-comment the lines below -->
-	<title>{title}</title>
+	<title>{title} | {siteTitle}</title>
 	<meta data-key="description" name="description" content={excerpt} />
 	<meta property="og:type" content="article" />
-	<meta property="og:title" content={title} />
-	<meta name="twitter:title" content={title} />
+	<meta property="og:title" content={`${title} | ${siteTitle}`} />
+	<meta name="twitter:title" content={`${title} | ${siteTitle}`} />
 	<meta property="og:description" content={excerpt} />
 	<meta name="twitter:description" content={excerpt} />
-	<!-- <meta property="og:image" content="https://yourdomain.com/image_path" /> -->
+	<meta property="og:image" content={`${siteLink}${coverImage}`} />
 	<meta property="og:image:width" content={coverWidth} />
 	<meta property="og:image:height" content={coverHeight} />
-	<!-- <meta name="twitter:image" content="https://yourdomain.com/image_path" /> -->
+	<meta name="twitter:image" content={`${siteLink}${coverImage}`} />
 </svelte:head>
 
 <article class="post" bind:this={root} style="--tocPosition: {position}; --tocTop: {top}">

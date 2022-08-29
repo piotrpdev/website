@@ -4,12 +4,11 @@
 
 	import PostsList from '$lib/components/PostsList.svelte';
 	import Pagination from '$lib/components/Pagination.svelte';
-	import { siteDescription } from '$lib/config';
+	import { siteTitle } from '$lib/config';
 </script>
 
 <svelte:head>
-	<title>Projects</title>
-	<meta data-key="description" name="description" content={siteDescription} />
+	<title>Projects | {siteTitle}</title>
 </svelte:head>
 
 <div class="projects-container">

@@ -1,10 +1,11 @@
 <script>
 	import ContactForm from '$lib/components/ContactForm.svelte';
 	import SocialCard from '$lib/components/SocialCard.svelte';
+	import { siteTitle } from '$lib/config';
 </script>
 
 <svelte:head>
-	<title>Contact</title>
+	<title>Contact | {siteTitle}</title>
 </svelte:head>
 
 <div class="contact-container">

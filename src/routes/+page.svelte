@@ -46,7 +46,7 @@
 </script>
 
 <svelte:head>
-	<title>Piotr Płaczek's Website</title>
+	<title>Piotr Płaczek</title>
 </svelte:head>
 
 <div>

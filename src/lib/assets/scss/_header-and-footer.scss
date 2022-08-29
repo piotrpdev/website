@@ -7,6 +7,7 @@ footer {
 
 	a {
 		text-decoration: none;
+		height: 100%;
 
 		&.active {
 			font-weight: bold;
@@ -39,6 +40,19 @@ header {
 	justify-content: space-between;
 	align-items: center;
 
+	> div {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: center;
+
+		gap: 30vw;
+
+		@media (max-width: vars.$smMin) {
+			width: 100%;
+		}
+	}
+
 	@media (min-width: vars.$smMin) {
 		justify-content: center;
 		flex-wrap: wrap;
@@ -53,9 +67,13 @@ header {
 		color: inherit;
 		text-align: center;
 		margin: 0;
-		display: block;
 		font-size: 1.4rem;
 		font-weight: bold;
+
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
 
 		@media (min-width: vars.$smMin) {
 			font-size: 1.6rem;
@@ -168,9 +186,9 @@ header {
 			color: inherit;
 
 			ul {
-				margin: 1rem auto 0;
-				padding-top: 0.5rem;
-				border-top: 1px solid var(--dark);
+				// margin: 1rem auto 0;
+				// padding-top: 0.5rem;
+				// border-top: 1px solid var(--dark);
 				width: max-content;
 
 				li {

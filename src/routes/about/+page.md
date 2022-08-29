@@ -1,9 +1,10 @@
 <svelte:head>
 
-  <title>About</title>
+  <title>About | {siteTitle}</title>
 </svelte:head>
 
 <script>
+  import { siteTitle } from '$lib/config';
   import EpochCounter from '$lib/components/EpochCounter.svelte';
 </script>
 
