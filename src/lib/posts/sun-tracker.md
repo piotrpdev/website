@@ -19,23 +19,6 @@ school: Semester 2
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" crossorigin="anonymous">
 </svelte:head>
 
-<script>
-  import { getPosition } from "suncalc";
-
-  let waterford;
-  let alt;
-  let azm;
-
-  const refreshSun = () => waterford = getPosition(new Date(), 52.2593, -7.1101);
-
-  refreshSun();
-
-  $: {
-    alt = ((waterford.altitude * 90) / Math.PI) * 2;
-    azm = ((waterford.azimuth + Math.PI) * 180) / Math.PI;
-  }
-</script>
-
 ## Introduction
 
 I've always wanted to work on a serious project involving the [Canvas API](https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API), which is why I decided on an idea (for my second semester university project) that can benefit from simple shapes and lines being drawn to the screen: a website that shows the current position of the sun in certain countries.
@@ -93,21 +76,17 @@ That is exactly what we need! Let's pass some arguments:
 
 ```js
 // Waterford, Ireland
-SunCalc.getPosition(new Date(), 52.2593, -7.1101);
+const curPos = SunCalc.getPosition(new Date(), 52.2593, -7.1101);
 
 // Convert to degrees
-alt = ((curPos.altitude * 90) / Math.PI) * 2;
+const alt = ((curPos.altitude * 90) / Math.PI) * 2;
 // Add PI since this package measures azimuth south to west
-azm = ((curPos.azimuth + Math.PI) * 180) / Math.PI;
+const azm = ((curPos.azimuth + Math.PI) * 180) / Math.PI;
 ```
 
 Result:
 
-- Altitude: {alt}&deg;
-
-- Azimuth: {azm}&deg;
-
-<button type="button" on:click={refreshSun}>Refresh</button>
+<div class="media-container"><img loading="lazy" class="media" alt="SunCalc result" src="/project-media/sun-tracker/sunc.png" /></div>
 
 ## Drawing to the Screen
 
