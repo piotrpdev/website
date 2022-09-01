@@ -30,7 +30,8 @@ main {
 	}
 
 	p a,
-	.index-project a {
+	.index-project a,
+	figure a {
 		color: var(--link);
 		text-decoration: none;
 
@@ -119,6 +120,7 @@ li {
 		transition: transform 0.2s;
 
 		a {
+			position: relative;
 			height: 100%;
 			padding-bottom: 18px;
 		}
@@ -313,6 +315,15 @@ footer .socials {
 	.media {
 		width: 36rem;
 		box-shadow: var(--shadow) 0px 7px 29px 0px;
+
+		&.white {
+			background-color: var(--white);
+		}
+	}
+
+	figure {
+		margin: 0;
+		text-align: center;
 	}
 
 	&-left {
@@ -430,6 +441,11 @@ footer .socials {
 	border-radius: 1rem;
 	margin-top: 0.5rem;
 	font-size: medium;
+
+	&.post {
+		position: absolute;
+		right: 0.5rem;
+	}
 }
 
 /* https://css-tricks.com/fluid-width-video/ */

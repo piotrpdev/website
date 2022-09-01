@@ -7,6 +7,9 @@
 		<li>
 			<article>
 				<a href="/projects/{post.slug}">
+					{#if post.school}
+						<div class="badge post">{post.school}</div>
+					{/if}
 					<img
 						src={post.coverImage}
 						alt="Post cover"

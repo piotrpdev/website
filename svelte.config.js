@@ -4,6 +4,8 @@ import preprocess from 'svelte-preprocess';
 import rehypeAutolinkHeadings from 'rehype-autolink-headings';
 import rehypeSlug from 'rehype-slug';
 import rehypeToc from '@atomictech/rehype-toc';
+import rehypeKatexSvelte from "rehype-katex-svelte";
+import remarkMath from 'remark-math'
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
@@ -20,9 +22,11 @@ const config = {
 		mdsvex({
 			// The default mdsvex extension is .svx; this overrides that.
 			extensions: ['.md'],
-
+			remarkPlugins: [
+				remarkMath,
+			],
 			// Adds IDs to headings, and anchor links to those IDs. Note: must stay in this order to work.
-			rehypePlugins: [rehypeSlug, rehypeAutolinkHeadings, rehypeToc]
+			rehypePlugins: [rehypeSlug, rehypeAutolinkHeadings, rehypeToc, rehypeKatexSvelte]
 		})
 	],
 

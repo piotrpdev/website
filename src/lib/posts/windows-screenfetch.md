@@ -5,6 +5,7 @@ updated: '2022-08-24'
 categories:
   - 'desktop'
   - 'script'
+  - 'benchmark'
 coverImage: '/project-media/windows-screenfetch/thumb.png'
 coverWidth: 16
 coverHeight: 9
