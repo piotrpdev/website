@@ -3,7 +3,7 @@
 	import { crossfade } from 'svelte/transition';
 	import SunSvg from './svg/SunSVG.svelte';
 	import MoonSvg from './svg/MoonSVG.svelte';
-	import { browser } from '$app/env';
+	import { browser } from '$app/environment';
 
 	const STORAGE_KEY = 'theme';
 	const DARK_PREFERENCE = '(prefers-color-scheme: dark)';

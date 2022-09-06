@@ -17,8 +17,8 @@ export const load = async ({ url, params }) => {
 
 		let offset = page * postsPerPage - postsPerPage;
 
-		const totalPostsRes = await fetch(`${url.origin}/api/posts/count.json`);
-		const { total } = await totalPostsRes.json();
+		const totalPostsRes = await fetch(`${url.origin}/api/posts/count`);
+		const total = await totalPostsRes.json();
 		const { posts } = await fetchPosts({ offset, page });
 
 		return {

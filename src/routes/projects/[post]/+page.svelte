@@ -6,7 +6,7 @@
 		meta: { title, excerpt, date, updated, coverImage, coverWidth, coverHeight, categories }
 	} = data);
 
-	import { browser } from '$app/env';
+	import { browser } from '$app/environment';
 	import addCopyCodeButtons from '$lib/assets/js/addCopyCodeButtons';
 	import addTocButton from '$lib/assets/js/addTocButton';
 	import fixYTVideos from '$lib/assets/js/fixYTVideos';
