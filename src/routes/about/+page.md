@@ -82,7 +82,7 @@ Oh yeah, forgot about that. Turns out that [CeX's terms](https://ie.webuy.com/si
 
 During the past couple of years I have dove headfirst into programming and have worked on a lot of projects. You can find most of them on my [GitHub](https://github.com/piotrpdev) page and/or this [website](/projects).
 
-If you're curious why I stuck with JavaScript instead of Python or C++, it actually relates to what happened _after_ the above story. TL;DR I got curious about modding [Discord](https://discord.com/) and proceeded to dive down a _massive_ rabithole where I ended up falling in love with the language. _Acutally, it might be more of a love/hate relationship now that I think about it_...
+If you're curious why I stuck with JavaScript instead of Python or C++, it actually relates to what happened _after_ the above story. TL;DR I got curious about modding [Discord](https://discord.com/) and proceeded to dive down a _massive_ rabithole where I ended up falling in love with the language. _Actually, it might be more of a love/hate relationship now that I think about it_...
 
 ## What hobbies are you into?
 
