@@ -14,7 +14,7 @@
 
 <div class="pfp-container"><img class="pfp" alt="avatar" src="/images/pfp.jpg" /></div>
 
-Hi, my name is Piotr, but you can call Peter.
+Hi, my name is Piotr, but you can call me Peter.
 
 I was born in Poland but are currently studying for a [BSc (Hons.) in Software Systems Development](https://www.wit.ie/courses/bsc-hons-in-software-systems-development-degree-course) from the [South East Technological University](https://www.setu.ie/) (WIT) in Ireland. I am also planning on pursuing a front end developer position when I graduate.
 
