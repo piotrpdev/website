@@ -29,7 +29,17 @@ const config = {
 	],
 
 	kit: {
-		adapter: adapter()
+		adapter: adapter(),
+		prerender: {
+			entries: [
+				'*',
+				'/api/posts/page/[page]',
+				'/projects/category/page/[page]',
+				'/projects/category/[category]/page',
+				'/projects/category/[category]/page/[page]',
+				'/projects/page/[page]',
+			]
+		}
 	}
 };
 
