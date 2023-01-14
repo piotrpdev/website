@@ -24,3 +24,4 @@
 *.woff binary eol=auto
 *.pyc binary eol=auto
 *.pdf binary eol=auto
+*.webp binary eol=auto

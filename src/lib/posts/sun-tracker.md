@@ -29,7 +29,7 @@ school: Semester 2
 
 I've always wanted to work on a serious project involving the [Canvas API](https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API), which is why I decided on an idea (for my second semester university project) that can benefit from simple shapes and lines being drawn to the screen: a website that shows the current position of the sun in certain countries.
 
-To acomplish this, I had to figure out how to do two things:
+To accomplish this, I had to figure out how to do two things:
 
 1. Get the position of the sun in the sky
 
@@ -201,7 +201,7 @@ earth.src = 'assets/img/earth.png';
 sun.src = 'assets/img/sun.png';
 
 Promise.all(promisifyLoad([earth, sun])).then(() => {
-	// Updates and redraws everthing
+	// Updates and redraws everything
 	update();
 	// Removes loading bar (that we need because this takes a while)
 	document.getElementById('loader').style.display = 'none';
