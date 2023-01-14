@@ -136,6 +136,7 @@ li {
 
 		p {
 			margin-bottom: 0;
+			text-align: start;
 		}
 
 		&:hover {
@@ -279,7 +280,7 @@ footer .socials {
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	margin: 2rem 0rem;
+	margin: 2rem 0 2rem 2rem;
 
 	@media (min-width: vars.$smMin) {
 		float: right;
@@ -522,4 +523,8 @@ footer .socials {
 p > code,
 a code {
 	font-size: 1rem;
+}
+
+.project-video {
+	max-width: 50%;
 }

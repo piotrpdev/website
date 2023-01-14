@@ -13,6 +13,7 @@
 	import { preloadCode } from '$app/navigation';
 	import { onMount } from 'svelte';
 	import { fade } from 'svelte/transition';
+	import Analytics from '$lib/components/Analytics.svelte';
 
 	const transitionIn = { delay: 150, duration: 150 };
 	const transitionOut = { duration: 100 };
@@ -42,6 +43,8 @@
 	<!-- Preloads pfp on top of About page -->
 	<link rel="preload" as="image" href="/images/pfp.jpg" />
 </svelte:head>
+
+<Analytics />
 
 <!-- 
   The below markup is used on every page in the site. The <slot> is where the page's

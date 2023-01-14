@@ -11,6 +11,7 @@
 	"devDependencies": {
 		"@sveltejs/adapter-static": "^1.0.1",
 		"@sveltejs/kit": "^1.0.12",
+		"@types/gtag.js": "^0.0.12",
 		"eslint": "^8.22.0",
 		"eslint-config-prettier": "^8.3.0",
 		"eslint-plugin-svelte3": "^4.0.0",

@@ -19,6 +19,12 @@ school: Semester 2
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" crossorigin="anonymous">
 </svelte:head>
 
+<script>
+	import PostMedia from '$lib/components/PostMedia.svelte';
+    import ExtLink from '$lib/components/ExtLink.svelte';
+	const media = "/project-media/sun-tracker";
+</script>
+
 ## Introduction
 
 I've always wanted to work on a serious project involving the [Canvas API](https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API), which is why I decided on an idea (for my second semester university project) that can benefit from simple shapes and lines being drawn to the screen: a website that shows the current position of the sun in certain countries.
@@ -70,7 +76,7 @@ which returns:
 
 No idea what those mean? [Here is a diagram](https://commons.wikimedia.org/wiki/File:Azimuth-Altitude_schematic.svg):
 
-<div class="media-container"><figure><img loading="lazy" class="media" alt="sun position" src="/project-media/sun-tracker/sunpos.svg" /><figcaption><i>Diagram by <a href="https://commons.wikimedia.org/wiki/User_talk:TWCarlson" target="_blank" rel="noopener noreferrer">TWCarlson</a>, taken from <a href="https://commons.wikimedia.org/wiki/File:Azimuth-Altitude_schematic.svg" target="_blank" rel="noopener noreferrer">Wikimedia Commons</a>. Licensed under <a href="https://creativecommons.org/licenses/by-sa/3.0/deed.en" target="_blank" rel="noopener noreferrer">CC BY-SA 3.0</a>.</i></figcaption></figure></div>
+<PostMedia alt="sun position" dg wcu="TWCarlson" src={`${media}/sunpos.svg`} wc="Azimuth-Altitude_schematic.svg" cc="3" />
 
 That is exactly what we need! Let's pass some arguments:
 
@@ -86,7 +92,7 @@ const azm = ((curPos.azimuth + Math.PI) * 180) / Math.PI;
 
 Result:
 
-<div class="media-container"><img loading="lazy" class="media" alt="SunCalc result" src="/project-media/sun-tracker/sunc.png" /></div>
+<PostMedia alt="SunCalc result" src={`${media}/sunc.png`} />
 
 ## Drawing to the Screen
 
@@ -152,7 +158,7 @@ export function generateStars(num, width, height) {
 }
 ```
 
-<div class="media-container"><img loading="lazy" class="media" alt="black backdrop with stars" src="/project-media/sun-tracker/steps/1.png" /></div>
+<PostMedia alt="black backdrop with stars" src={`${media}/steps/1.png`} />
 
 #### The Earth
 
@@ -204,7 +210,7 @@ Promise.all(promisifyLoad([earth, sun])).then(() => {
 
 This is what we have now:
 
-<div class="media-container"><img loading="lazy" class="media" alt="same as before, with the earth" src="/project-media/sun-tracker/steps/2.png" /></div>
+<PostMedia alt="same as before, with the earth" src={`${media}/steps/2.png`} />
 
 #### Directions
 
@@ -227,7 +233,7 @@ ctx.textAlign = 'end';
 ctx.fillText('W', width - 10, 50);
 ```
 
-<div class="media-container"><img loading="lazy" class="media" alt="same as before, with directions" src="/project-media/sun-tracker/steps/3.png" /></div>
+<PostMedia alt="same as before, with directions" src={`${media}/steps/3.png`} />
 
 Why these directions? Since the Sun rises in the East and sets in the West, and we want to show its position in 2D, let's have it on the left side of the Earth while it is rising, and on the right side when it is setting.
 
@@ -260,7 +266,7 @@ ctx.stroke();
 
 The numbers don't really matter so don't worry if it looks convoluted.
 
-<div class="media-container"><img loading="lazy" class="media" alt="same as before, with directions" src="/project-media/sun-tracker/steps/4.png" /></div>
+<PostMedia alt="same as before, with directions" src={`${media}/steps/4.png`} />
 
 Now we just need the sun to follow that path:
 
@@ -288,13 +294,15 @@ const sunY = cy + r * Math.sin(angle);
 ctx.drawImage(sun, sunX, sunY, sunSize, sunSize);
 ```
 
-<div class="media-container"><img loading="lazy" class="media" alt="same as before, with directions" src="/project-media/sun-tracker/steps/5.png" /></div>
+<PostMedia alt="same as before, with directions" src={`${media}/steps/5.png`} />
 
 Don't worry if you don't get the math, but you can read the next section if you're interested.
 
 #### Nerd stuff
 
-<div class="media-container"><figure><img loading="lazy" class="media" alt="sun position" src="/project-media/sun-tracker/sunpos2.gif" /><figcaption><i>Diagram by <a href="https://www.locationworks.com/" target="_blank" rel="noopener noreferrer">Location Works</a>, taken from <a href="https://www.locationworks.com/sunrise/instruct/" target="_blank" rel="noopener noreferrer">this page</a>. Copyight &copy; Location Works, 2002.</i></figcaption></figure></div>
+<PostMedia alt="sun position" white art="https://www.locationworks.com/sunrise/instruct/" src={`${media}/sunpos2.gif`} arr="Location Works, 2002">
+Diagram by <ExtLink href="https://www.locationworks.com/">Location Works</ExtLink>,
+</PostMedia>
 
 As you can see, the sun's path is an arc starting in the East and ending in the West. If North is 0&deg; then East is 90&deg;, South is 180&deg;, and West is 270&deg;. This is the _Azimuth_.
 
@@ -304,7 +312,7 @@ Therefore, if the azimuth is less than 180&deg;, it is between North and South, 
 
 Since we are making the sun follow a circular path, we need to use Cos and Sin. But if we pass them 45&deg; (in radians), for example, it will end up top-right, instead of top-left:
 
-<div class="media-container"><figure><img loading="lazy" class="media white" alt="circle" src="/project-media/sun-tracker/circle.svg" /><figcaption><i>Diagram by <a href="https://commons.wikimedia.org/wiki/User:Crossover1370" target="_blank" rel="noopener noreferrer">Crossover1370</a>, taken from <a href="https://commons.wikimedia.org/wiki/File:Unit_circle_sine_cosine.svg" target="_blank" rel="noopener noreferrer">Wikimedia Commons</a>. Licensed under <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.en" target="_blank" rel="noopener noreferrer">CC BY-SA 4.0</a>.</i></figcaption></figure></div>
+<PostMedia alt="circle" white dg wcu="Crossover1370" src={`${media}/circle.svg`} wc="Unit_circle_sine_cosine.svg" cc="4" />
 
 Therefore, we need to add `Math.Pi` (180&deg;) to put it on the left (when it is rising), and subtract it from `2 * Math.Pi` (360&deg;) to keep it on the right (when it is setting).
 
@@ -318,13 +326,15 @@ if (azm < 180) {
 
 > If we weren't using the Canvas API we would actually do the opposite e.g. subtract from Math.PI when rising. However, we need to switch the sign on the y value, since the Canvas API actually increases the y coord as you go down.
 
-<div class="media-container"><figure><img loading="lazy" class="media white" alt="canvas api coords" src="/project-media/sun-tracker/canvas.png" /><figcaption><i>Diagram by <a href="https://www.coding.academy/" target="_blank" rel="noopener noreferrer">Patrick Morrow</a>, taken from <a href="https://www.coding.academy/blog/drawing-shapes-using-html5-canvas-part-2-drawing-a-rectangle" target="_blank" rel="noopener noreferrer">this article</a>. Copyight &copy; Coding.Academy, 2021.</i></figcaption></figure></div>
+<PostMedia alt="canvas api coords" white art="https://www.coding.academy/blog/drawing-shapes-using-html5-canvas-part-2-drawing-a-rectangle" src={`${media}/canvas.png`} arr="Coding.Academy, 2021">
+Diagram by <ExtLink href="https://www.coding.academy/">Patrick Morrow</ExtLink>,
+</PostMedia>
 
 ## Finishing Touches
 
 That's pretty much it. To finish it off, we can display some data and style the whole thing using [Semantic UI](https://semantic-ui.com/).
 
-<div class="media-container"><img loading="lazy" class="media" alt="same as before, with directions" src="/project-media/sun-tracker/steps/6.png" /></div>
+<PostMedia alt="same as before, with directions" src={`${media}/steps/6.png`} />
 
 By using [@mapbox/timespace](https://www.npmjs.com/package/@mapbox/timespace) we can find out the approximate timezone at a given set of coordinates and use SunCalc again to get different times of interest e.g. sunrise.
 
