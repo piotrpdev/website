@@ -5,22 +5,22 @@
 #
 
 # (binary is a macro for -text -diff)
-*.png binary
-*.jpg binary
-*.jpeg binary
-*.gif binary
-*.ico binary
-*.mov binary
-*.mp4 binary
-*.mp3 binary
-*.flv binary
-*.fla binary
-*.swf binary
-*.gz binary
-*.zip binary
-*.7z binary
-*.ttf binary
-*.eot binary
-*.woff binary
-*.pyc binary
-*.pdf binary
+*.png binary eol=auto
+*.jpg binary eol=auto
+*.jpeg binary eol=auto
+*.gif binary eol=auto
+*.ico binary eol=auto
+*.mov binary eol=auto
+*.mp4 binary eol=auto
+*.mp3 binary eol=auto
+*.flv binary eol=auto
+*.fla binary eol=auto
+*.swf binary eol=auto
+*.gz binary eol=auto
+*.zip binary eol=auto
+*.7z binary eol=auto
+*.ttf binary eol=auto
+*.eot binary eol=auto
+*.woff binary eol=auto
+*.pyc binary eol=auto
+*.pdf binary eol=auto
