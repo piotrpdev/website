@@ -17,6 +17,10 @@ excerpt: Windows-screenFetch but faster
     import SpeedTable from '$lib/components/SpeedTable.svelte'
     import DoubleBar from '$lib/components/DoubleBar.svelte'
 
+	const xCallback = function (value) {
+		return this.getLabelForValue(value).substring(4, 12);
+	}
+
     const [beforeTotals, afterTotals] = ["before", "after"].map((data) => Object.assign(
 		...Object.keys(speedData[data][0]).map((key) => ({
 			[key]: (
@@ -63,7 +67,7 @@ TL;DR: [_Windows-screenFetch_](https://github.com/JulianChow94/Windows-screenFet
 <div class="hide-on-mobile">
     <h3>Average</h3>
     
-    <DoubleBar title="Windows-screenFetch vs Windows-screenFetch-fast" data={totalsBarData} />
+    <DoubleBar title="Windows-screenFetch vs Windows-screenFetch-fast" xCallback={xCallback} yTitle="Speed (ms)" data={totalsBarData} />
 </div>
 
 ### Before

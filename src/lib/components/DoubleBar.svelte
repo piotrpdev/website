@@ -1,6 +1,10 @@
 <script>
 	export let title;
 	export let data;
+	export let xCallback;
+	export let xTitle;
+	export let yTitle;
+	export let className;
 
 	import { onMount } from 'svelte';
 
@@ -16,7 +20,7 @@
 	Chart.register(Title, Tooltip, Legend, BarElement, CategoryScale, LinearScale);
 </script>
 
-<div class="chart">
+<div class={`chart${className ? ` ${className}` : ''}`}>
 	<svelte:component
 		this={Bar}
 		{data}
@@ -31,15 +35,14 @@
 			scales: {
 				x: {
 					ticks: {
-						callback: function (value) {
-							return this.getLabelForValue(value).substring(4, 12);
-						}
+						callback: xCallback,
+						text: xTitle
 					}
 				},
 				y: {
 					title: {
 						display: true,
-						text: 'Speed (ms)'
+						text: yTitle
 					}
 				}
 			}

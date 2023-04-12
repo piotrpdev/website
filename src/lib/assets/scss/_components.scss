@@ -327,13 +327,16 @@
 	border-radius: 0.3rem;
 	padding: 1rem 2rem;
 
-	@media (min-width: 1600px) {
-		margin-left: -50%;
-		margin-right: -50%;
+	&:not(.small) {
+		@media (min-width: 1600px) {
+			margin-left: -50%;
+			margin-right: -50%;
+		}
 	}
 
 	@media (min-width: vars.$smMin) {
 		margin-top: 3rem;
+		margin-bottom: 3rem;
 		max-width: none;
 	}
 }
