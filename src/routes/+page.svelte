@@ -4,27 +4,30 @@
 	const projects = [
 		{
 			thumb: '/images/cao-dark.jpg',
-			link: 'https://leavingcertcao.xyz/',
+			link: 'https://cao-calculator.vercel.app/',
 			title: 'CAO Calculator',
 			description:
-				'Android app that helps calculate how many CAO points you need to qualify for a course.',
-			school: null
+				'Android app that helps calculate how many CAO points you need to qualify for a course.'
+		},
+		{
+			thumb: '/project-media/arduino-discord-controller/thumb.jpg',
+			link: '/projects/arduino-discord-controller',
+			title: 'Arduino Discord Controller',
+			description: 'Controlling Discord using a combination of Arduino, BetterDiscord, and Python.'
 		},
 		{
 			thumb: '/images/sheet.jpg',
 			link: 'https://github.com/piotrpdev/WeBuy-Cex-Price-Tracker',
 			title: 'WeBuy Cex Price Tracker',
 			description:
-				'A python script that gets the prices of certain Cex products and uploads them to google sheets.',
-			school: null
+				'A python script that gets the prices of certain Cex products and uploads them to google sheets.'
 		},
 		{
 			thumb: '/images/wit-timetable.png',
 			link: 'https://github.com/piotrpdev/WIT-Timetable-Generator',
 			title: 'WIT Timetable Generator',
 			description:
-				'Uses Puppeteer to automatically fill out the WIT Timetable Page and generate a screenshot and PDF of the timetable.',
-			school: null
+				'Uses Puppeteer to automatically fill out the WIT Timetable Page and generate a screenshot and PDF of the timetable.'
 		},
 		{
 			thumb: '/images/wd1ca1.jpg',
@@ -33,14 +36,6 @@
 			description:
 				'Website that displays the current position of the sun in a variety of countries.',
 			school: 'Semester 2'
-		},
-		{
-			thumb: '/images/wd1ca2.jpg',
-			link: 'https://peter-wd1ca2.netlify.app/',
-			title: 'Rosslare Tidy Towns',
-			description:
-				'Website dedicated to Rosslare Tidy Towns, a non-profit organization in my town.',
-			school: 'Semester 1'
 		}
 	];
 </script>

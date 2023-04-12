@@ -143,4 +143,4 @@ I think a lot of programs are turning to web apps, e.g. Microsoft Teams or Disco
 
 To include your own code that interacts with the computer you have to use the Extensions API. I think this is fine, but having to handle the cross-compilation for whatever language you use is a bit annoying, especially if you need to compile on each platform separately.
 
-[Here is the final code on GitHub!](https://github.com/piotrpdev/pc-specs).
+[Here is the final code on GitHub!](https://github.com/piotrpdev/pc-specs)

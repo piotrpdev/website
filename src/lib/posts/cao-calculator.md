@@ -15,7 +15,7 @@ excerpt: Android app that helps calculate how many CAO points you need to qualif
     import FigmaFrame from '$lib/components/FigmaFrame.svelte'
 </script>
 
-> _DISCLAIMER: This is an adaptation of a Word document I have written that showcases parts of the creation process for this app (for the ISE module of my course). You can download it [here](/project-media/cao-calculator/App.docx). <br><br> [I actually made the app](https://leavingcertcao.xyz/) long **before** writing the document, but wrote it in past-tense anyway._
+> _DISCLAIMER: This is an adaptation of a Word document I have written that showcases parts of the creation process for this app (for the ISE module of my course). You can download it [here](/project-media/cao-calculator/App.docx). <br><br> [I actually made the app](https://cao-calculator.vercel.app/) long **before** writing the document, but wrote it in past-tense anyway._
 
 ## Introduction
 
@@ -108,4 +108,4 @@ When I was attending secondary school, I always wanted an app like this. I would
 
 I think that with the features and prototypes provided in this document, realising the ideas and implementing them in a real product would be very manageable. Researching this app idea was fun, and I definitely learned a lot about planning and determining the feasibility of an idea.
 
-> _Like I said before, I actually already made the app. Check it out [here](https://leavingcertcao.xyz/)._
+> _Like I said before, I actually already made the app. Check it out [here](https://cao-calculator.vercel.app/)._
